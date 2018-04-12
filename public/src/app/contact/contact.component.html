@@ -1,0 +1,54 @@
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+
+<app-nav-bar></app-nav-bar>
+<!--Page title -->
+<div class="page-title-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 wow fadeIn">
+        <i class="fa fa-envelope"></i>
+        <h1>Contact Us /</h1>
+        <p>Here is how you can contact us</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Form -->
+<div class="contact-us-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 contact-form">
+        <form >
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" name="name" placeholder="Enter your name..." 
+            class="contact-name" id="contact-name" [(ngModel)]="message.name">
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="text" name="email" placeholder="Enter your email..." 
+            class="contact-email" id="contact-email" [(ngModel)]="message.email">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea name="message" placeholder="Your message..." 
+            class="contact-message" id="contact-message" [(ngModel)]="message.body"></textarea>
+          </div>
+          <input type="submit" class="btn" (click)="sendMessage()" value="Send">
+        </form>
+      </div>
+      <div class="col-sm-5 contact-address">
+        <h3>We Are Here</h3>
+        <div class="map"></div>
+        <h3>Social Media</h3>
+          <a href="http://www.facebook.com">Facebook</a>
+          <a href="">Twitter</a>
+          <a href="">Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>

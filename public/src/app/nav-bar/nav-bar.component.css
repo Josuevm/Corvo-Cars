@@ -1,0 +1,48 @@
+
+.navbar {
+	margin-bottom: 0;
+	padding-top: 10px;
+	background: none;
+	border: 0;
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+	-o-transition: all .6s; -moz-transition: all .6s; -webkit-transition: all .6s; -ms-transition: all .6s; transition: all .6s;
+}
+
+ul.navbar-nav {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.navbar-inverse ul.navbar-nav li a { color: #222; border: 0; }
+.navbar-inverse ul.navbar-nav li a:hover { color: #ddd; border: 0; }
+.navbar-inverse ul.navbar-nav li a:focus { color: #ddd; outline: 0; border: 0; }
+
+.navbar-inverse ul.navbar-nav li a.btn-link-3 {
+	display: inline-block;
+	margin: 9px 0 0 15px;
+	padding: 6px 15px;
+	background: #cb9f3d;
+	border: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 1;
+    text-transform: uppercase;
+    -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+}
+.navbar-inverse ul.navbar-nav li a.btn-link-3:hover,
+.navbar-inverse ul.navbar-nav li a.btn-link-3:focus,
+.navbar-inverse ul.navbar-nav li a.btn-link-3:active,
+.navbar-inverse ul.navbar-nav li a.btn-link-3:active:focus { outline: 0; opacity: 0.6; color: #fff; }
+
+.navbar-brand {
+	width: 102px;
+	background: url(../../../images/Header/logo.png) left center no-repeat;
+	text-indent: -99999px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand { margin-left: 0; }
+
