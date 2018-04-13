@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-models',
@@ -7,29 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelsComponent implements OnInit {
 
-  models = [
-    {
-      image: "Car Image",
-      name : "Corvo Imperiale",
-      description: "Car description"
-    },
-    {
-      image: "Car Image",
-      name : "Corvo 4x4",
-      description: "Car description"
-    },
-    {
-      image: "Car Image",
-      name : "Corvo SUV",
-      description: "Car description"
-    }
-  ];
+  models: any;
 
   selectedModel: Number=1;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.getModels();
+  }
+
+  getModels(){
+    this.http.get('/car_models').subscribe( data =>{
+      this.models = data;
+    })
   }
 
   setSelectedModel(index){

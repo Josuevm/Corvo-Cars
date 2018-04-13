@@ -1,16 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="section-title">
-        <h1>Models</h1>
+      <h1>Models</h1>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12-md col-md-offset-1">
-      <div class="col-md-4" *ngFor="let model of models; let i = index" 
-        (click)="setSelectedModel(i)">
+  <div class="row top-buffer">
+    <div class="col-md-12  col-xs-12">
+      <div class="col-md-4 col-xs-4" *ngFor="let model of models; let i = index" (click)="setSelectedModel(i)">
         <div class="model-container" [class.active]="i == selectedModel">
           <div class="contain-header">
-            <h1>{{model.image}}</h1>
+            <img src="{{model.image}}" alt="">
           </div>
           <div class="contain-footer">
             <div class="model-name">

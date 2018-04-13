@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var car_modelsRouter = require('./routes/car_models');
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public/dist')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/car_models', car_modelsRouter);
 
 //mongoose db connection
 var mongoose = require('mongoose');
