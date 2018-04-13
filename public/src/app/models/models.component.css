@@ -1,0 +1,16 @@
+.section-title {
+    font-family: "Josefine sans", "sans-seriff";
+    border-bottom: 1px solid #222;
+    text-align: center;
+}
+
+.model-container{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.model-container.active {
+    border: 2px solid rgb(10, 10, 10);
+}
