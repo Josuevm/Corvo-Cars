@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { ModelsComponent } from './models/models.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { Ng4TwitterTimelineModule } from 'ng4-twitter-timeline/lib/index';
 
 
 @NgModule({
@@ -19,9 +21,12 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     ModelsComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
+   
   ],
   imports: [
+    Ng4TwitterTimelineModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule

@@ -1,0 +1,109 @@
+
+footer{
+    background:#37474F;
+    color:white;
+    background-image:url("https://www.lamborghini.com/themes/custom/lambo/img/base/bg-footer.jpg");
+    background-size: 100% 
+    }
+    
+    a{
+       
+     color:white;
+     text-decoration:none
+    
+    }
+    hr{
+      display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0; 
+    }
+    
+     i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram{
+     border-radius: 100%;
+     font-size: 28px;
+     height: 40px;
+     line-height: 40px;
+     margin: 5px;
+     text-align: center;
+     width: 40px;
+     }
+     i.fa.fa-facebook{
+     border: 1px solid #FFFFFF;
+     color: #FFFFFF;
+     }
+     i.fa.fa-twitter{
+     border: 1px solid #FFFFFF;
+     color: #FFFFFF;
+     }
+     i.fa.fa-instagram{
+     border: 1px solid #FFFFFF;
+     color: #FFFFFF;
+     }
+     i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram,i.fa.fa-pinterest,i.fa.fa-linkedin,i.fa.fa-google-plus,i.fa.fa-github{
+     border-radius: 100%;
+     font-size: 28px;
+     height: 38px;
+     line-height: 40px;
+     margin: 5px;
+     text-align: center;
+     width: 38px;
+     }
+     i.fa.fa-github{
+     border: 1px solid #FFFFFF;
+     color: #FFFFFF;
+     }
+     i.fa.fa-google-plus{
+     border: 1px solid #FFFFFF;
+     color: #FFFFFF;
+     }
+     i.fa.fa-pinterest{
+     border: 1px solid #FFFFFF;
+     color: #FFFFFF;
+     }
+     i.fa.fa-linkedin{
+     border: 1px solid #FFFFFF;
+     color: #FFFFFF;
+     }
+    
+    .social-icons .fa:hover, .social-icons .fa:active {
+        color: #FFF;
+        -webkit-box-shadow: 1px 1px 3px #333;
+        -moz-box-shadow: 1px 1px 3px #333;
+        box-shadow: 1px 1px 3px #333; 
+    }
+    
+    .social-icons.icon-zoom .fa:hover, .social-icons.icon-zoom .fa:active { 
+         -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); 
+    }
+    .list-unstyled {
+        padding-left: 0;
+        list-style: none;
+    }
+    .list-inline li {
+        display: inline-block;
+        padding-right: 0.5px;
+        padding-left: 0px;
+        margin-bottom: -90px;
+    }
+    .copyright {
+        padding: 0px;
+        text-align: center;
+    }
+    .row a:hover{
+      color:#787878;
+      text-decoration:none
+    }
+    
+    .row a:active{
+      
+      color:#FFFFFF;
+      text-decoration:none
+    }
+    
