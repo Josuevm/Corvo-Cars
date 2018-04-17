@@ -38,5 +38,8 @@ export class BuilderComponent implements OnInit {
   ngOnInit() {
 
   }
+  showModal(){
+
+ }
 
 }
