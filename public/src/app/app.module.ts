@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Ng4TwitterTimelineModule } from 'ng4-twitter-timeline/lib/index';
+import { ModelInfoComponent } from './model-info/model-info.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { Ng4TwitterTimelineModule } from 'ng4-twitter-timeline/lib/index';
     ModelsComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ModelInfoComponent
    
   ],
   imports: [
