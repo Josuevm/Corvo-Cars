@@ -11,7 +11,7 @@ export class ModelsComponent implements OnInit {
   models: any;
 
   selectedModel: Number=1;
-  selectedModelName: String = "Corvo imperiale";
+  selectedModelName: String = "";
 
   constructor(private http: HttpClient) { }
 
