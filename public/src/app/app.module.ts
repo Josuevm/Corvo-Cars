@@ -16,6 +16,7 @@ import { Ng4TwitterTimelineModule } from 'ng4-twitter-timeline/lib/index';
 import { BuilderComponent } from './car_builder/builder/builder.component';
 import { ColorPickerComponent } from './car_builder/color-picker/color-picker.component';
 import { BuildScreenComponent } from './car_builder/build-screen/build-screen.component';
+import { ModelInfoComponent } from './model-info/model-info.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { BuildScreenComponent } from './car_builder/build-screen/build-screen.co
     FooterComponent,
     BuilderComponent,
     ColorPickerComponent,
-    BuildScreenComponent
+    BuildScreenComponent,
+    ModelInfoComponent
    
   ],
   imports: [

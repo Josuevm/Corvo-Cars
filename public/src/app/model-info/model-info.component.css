@@ -1,0 +1,31 @@
+.imperiale-container{
+    background: url(../../../images/Models_Backgrounds/imperiale_bg.jpeg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 80%;
+    padding: 350px 0 400px 0
+}
+
+.kubanyi-container{
+    background: url(../../../images/Models_Backgrounds/kubanyi_bg.jpeg) no-repeat center center;
+    font-family: 'Roboto', sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 80%;
+    padding: 350px 0 400px 0
+}
+
+.imparatus-container{
+    background: url(../../../images/Models_Backgrounds/imparatus_bg.jpeg) no-repeat center center;
+    font-family: 'Roboto', sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 80%;
+    padding: 350px 0 400px 0
+}

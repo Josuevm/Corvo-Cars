@@ -11,6 +11,7 @@ export class ModelsComponent implements OnInit {
   models: any;
 
   selectedModel: Number=1;
+  selectedModelName: String = "";
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +27,6 @@ export class ModelsComponent implements OnInit {
 
   setSelectedModel(index){
     this.selectedModel = index;
+    this.selectedModelName = this.models[index].name;
   }
 }

@@ -4,12 +4,21 @@ var mongoose = require('mongoose');
 var Car_models = require('../models/Car_models.js');
 
 /* GET models listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
     Car_models.find(function (err, products) {
         if (err) return next(err);
         res.json(products);
-      });
-  });
+    });
+});
+
+router.get('/features/:model', function (req, res, next) {
+    var modelName = decodeURIComponent(req.params.model);
+    Car_models.findOne({name: modelName},function (err, response) {
+        if (err) return next(err);
+        console.log(response.features);
+        res.send(response.features);
+    });
+});
 
 
 module.exports = router;
