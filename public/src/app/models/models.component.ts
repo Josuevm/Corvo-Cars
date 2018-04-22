@@ -22,10 +22,13 @@ export class ModelsComponent implements OnInit {
   getModels(){
     this.http.get('/car_models').subscribe( data =>{
       this.models = data;
-    })
+      this.selectedModelName = this.models[1].name; // selecciona el modelo inicial, asi no tiene que usar el default prros
+    });
+    
   }
 
   setSelectedModel(index){
+  
     this.selectedModel = index;
     this.selectedModelName = this.models[index].name;
   }
