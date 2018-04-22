@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+        <div class="section-title">
+          <h1>Builder</h1>
+        </div>
+    </div>
+
+  <div class="row builder">
+    
+    <div class="col s1">
+      <!--Iterate over the posible options to show it-->
+      <div *ngFor="let option of options" 
+            class="row card-panel hoverable" 
+            (click)="selectedOption = option.name" 
+            [class.active]="selectedOption == option.name">
+        <i class="material-icons">{{option.icon}}</i>
+        <label>{{option.name}}</label>
+        
+      </div>
+       <div class="builderPreview"> <a href="#" class="btn btn-sm animated-button sandy-two" (click)="showModal()">Preview</a></div>   
+       
+    </div>
+
+    <div class="col s11" >
+      <div class="builderPreview" [ngSwitch]="selectedOption">
+          <div *ngSwitchCase="'color'">
+              <build-screen>
+                  <ng-container class="buildOption">
+                    <color-picker></color-picker>
+                  </ng-container>
+              </build-screen>            
+            </div>
+            
+            <div *ngSwitchCase="'motor'">        
+                <build-screen>
+                    <ng-container class="buildOption">
+                      <!--Replace with component to be loaded--> 
+                      <div class="centered">Motor</div>
+                    </ng-container>
+                </build-screen> 
+            </div>
+
+            <div *ngSwitchCase="'extras'">
+                <build-screen>
+                    <ng-container class="buildOption">
+                      <!--Replace with component to be loaded--> 
+                      <div class="centered">Extras</div>
+                    </ng-container>
+                </build-screen> 
+            </div>
+
+            <div *ngSwitchCase="'inside'">
+                <build-screen>
+                    <ng-container class="buildOption">
+                      <!--Replace with component to be loaded--> 
+                      <div class="centered">Inside</div>
+                    </ng-container>
+                </build-screen> 
+            </div>
+
+            <div *ngSwitchCase="'rims'">
+                <build-screen>
+                    <ng-container class="buildOption">
+                      <!--Replace with component to be loaded--> 
+                      <div class="centered">Rims</div>
+                    </ng-container>
+                </build-screen> 
+            </div>
+
+            <div *ngSwitchDefault>  
+                <build-screen>
+                    <ng-container class="buildOption">
+                      <!--Replace with component to be loaded--> 
+                      <div class="centered">Color</div>
+                    </ng-container>
+                </build-screen> 
+            </div>
+            
+      </div>
+      <div >
+     
+         
+       </div>
+      
+    </div>
+    
+  </div>
+</div>

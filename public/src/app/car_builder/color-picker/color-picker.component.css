@@ -1,0 +1,36 @@
+.colorPicker {
+    box-sizing: inherit;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+}
+
+.colorPalet {
+    min-height: 70px;
+    margin: 0%;
+    position: absolute;
+    bottom: 1%;
+    right: 30%;
+    left: 30%;
+    border-radius: 20%;
+    background: radial-gradient( rgba(255,255,255, 0.6), rgba(255,255,255, 0.3), rgba(255,255,255, 0.1));
+}
+
+.circle {
+    margin-right: 20px;
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle:hover {
+    height: 55px;
+    width: 55px;
+}
