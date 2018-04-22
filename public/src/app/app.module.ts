@@ -13,7 +13,9 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Ng4TwitterTimelineModule } from 'ng4-twitter-timeline/lib/index';
-import { BuilderComponent } from './builder/builder.component';
+import { BuilderComponent } from './car_builder/builder/builder.component';
+import { ColorPickerComponent } from './car_builder/color-picker/color-picker.component';
+import { BuildScreenComponent } from './car_builder/build-screen/build-screen.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { BuilderComponent } from './builder/builder.component';
     ContactComponent,
     HeaderComponent,
     FooterComponent,
-    BuilderComponent
+    BuilderComponent,
+    ColorPickerComponent,
+    BuildScreenComponent
    
   ],
   imports: [
