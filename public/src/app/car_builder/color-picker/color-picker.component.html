@@ -1,14 +1,8 @@
-<div class="container colorPicker">
-    
-    <div class="row">
-      <div class="col-s12 centered">
-         {{selectedColor}}
-      </div>
-    </div>
+<div class="colorPicker">
 
     <div class="row colorPalet z-depth-2">
       <div *ngFor="let color of colors"
-            class="col-s2 circle" 
+            class="col-xs-1 col-sm-2 circle" 
             [style.background-color]='color.hexcode'
             (click)="selectedColor = color.id"
            >

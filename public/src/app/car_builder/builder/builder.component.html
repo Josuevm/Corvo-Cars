@@ -1,88 +1,54 @@
-<div class="container">
-    <div class="row">
-        <div class="section-title">
-          <h1>Builder</h1>
-        </div>
-    </div>
-
-  <div class="row builder">
-    
-    <div class="col s1">
-      <!--Iterate over the posible options to show it-->
-      <div *ngFor="let option of options" 
-            class="row card-panel hoverable" 
-            (click)="selectedOption = option.name" 
-            [class.active]="selectedOption == option.name">
-        <i class="material-icons">{{option.icon}}</i>
-        <label>{{option.name}}</label>
-        
-      </div>
-       <div class="builderPreview"> <a href="#" class="btn btn-sm animated-button sandy-two" (click)="showModal()">Preview</a></div>   
-       
-    </div>
-
-    <div class="col s11" >
-      <div class="builderPreview" [ngSwitch]="selectedOption">
-          <div *ngSwitchCase="'color'">
+<div class="black">
+    <div class="container-fluid builder">
+        <div class="row">
+          
+          <div class="col-xs-12 col-sm-12 col-md-1 optionsBar">
+            <!--SideBar-->
+            <div *ngFor="let option of options" 
+                  class="col-xs-2 col-sm-2 col-md-12 box foo" 
+                  (click)="selectedOption = option.name" 
+                  [class.active]="selectedOption == option.name">   
+                  <i class="material-icons">{{option.icon}}</i>
+            </div>
+            <div class='box foo button col-xs-1 col-sm-1 col-md-10'(click)="showModal()">Preview</div>    
+          </div>
+      
+          <div class="col-xs-12 col-sm-12 col-md-11" >
               <build-screen>
                   <ng-container class="buildOption">
-                    <color-picker></color-picker>
-                  </ng-container>
-              </build-screen>            
-            </div>
-            
-            <div *ngSwitchCase="'motor'">        
-                <build-screen>
-                    <ng-container class="buildOption">
-                      <!--Replace with component to be loaded--> 
-                      <div class="centered">Motor</div>
-                    </ng-container>
-                </build-screen> 
-            </div>
-
-            <div *ngSwitchCase="'extras'">
-                <build-screen>
-                    <ng-container class="buildOption">
-                      <!--Replace with component to be loaded--> 
-                      <div class="centered">Extras</div>
-                    </ng-container>
-                </build-screen> 
-            </div>
-
-            <div *ngSwitchCase="'inside'">
-                <build-screen>
-                    <ng-container class="buildOption">
-                      <!--Replace with component to be loaded--> 
-                      <div class="centered">Inside</div>
-                    </ng-container>
-                </build-screen> 
-            </div>
-
-            <div *ngSwitchCase="'rims'">
-                <build-screen>
-                    <ng-container class="buildOption">
-                      <!--Replace with component to be loaded--> 
-                      <div class="centered">Rims</div>
-                    </ng-container>
-                </build-screen> 
-            </div>
-
-            <div *ngSwitchDefault>  
-                <build-screen>
-                    <ng-container class="buildOption">
-                      <!--Replace with component to be loaded--> 
-                      <div class="centered">Color</div>
-                    </ng-container>
-                </build-screen> 
-            </div>
-            
-      </div>
-      <div >
-     
-         
-       </div>
-      
-    </div>
-    
-  </div>
+                      <div [ngSwitch]="selectedOption">
+                          
+                          <div *ngSwitchCase="'color'">
+                              <color-picker></color-picker>     
+                          </div>
+                                
+                          <div *ngSwitchCase="'motor'">        
+                                  <!--Replace with component to be loaded--> 
+                                  <h1>Motor</h1>
+                          </div>
+                      
+                          <div *ngSwitchCase="'extras'">
+                              <!--Replace with component to be loaded--> 
+                                  <h1>Extras</h1>
+                          </div>
+                      
+                          <div *ngSwitchCase="'inside'">
+                                  <!--Replace with component to be loaded--> 
+                                  <h1>Inside</h1>
+                          </div>
+                      
+                          <div *ngSwitchCase="'rims'">
+                                  <!--Replace with component to be loaded--> 
+                                  <h1>Rims</h1>
+                          </div>
+                      
+                          <div *ngSwitchDefault>  
+                                  <color-picker></color-picker>
+                          </div>           
+                      </div>
+                  </ng-container>   
+              </build-screen>
+          </div>   
+        </div>
+      </div>      
 </div>

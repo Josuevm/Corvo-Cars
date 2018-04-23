@@ -1,36 +1,23 @@
 .colorPicker {
-    box-sizing: inherit;
-}
-
-.centered {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 30px;
-    transform: translate(-50%, -50%);
+    bottom: 2vh;
 }
 
 .colorPalet {
-    min-height: 70px;
-    margin: 0%;
-    position: absolute;
-    bottom: 1%;
-    right: 30%;
-    left: 30%;
+    margin-left: 30vw;
+    height: 10vh;
+    width: 30vw;
     border-radius: 20%;
-    background: radial-gradient( rgba(255,255,255, 0.6), rgba(255,255,255, 0.3), rgba(255,255,255, 0.1));
+    background: radial-gradient( rgba(255,255,255, 0.7), rgba(255,255,255, 0.4), rgba(255,255,255, 0.1));
 }
 
 .circle {
-    margin-right: 20px;
-    margin-top: 5px;
-    height: 40px;
-    width: 40px;
+    height: 6vh;
+    width: 6vh;
     border-radius: 50%;
-    display: inline-block;
 }
 
 .circle:hover {
-    height: 55px;
-    width: 55px;
+    height: 8vh;
+    width: 8vh;
 }

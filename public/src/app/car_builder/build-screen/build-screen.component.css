@@ -1,10 +1,14 @@
-img {
-    max-width: 100%;
-    max-height: 100%;
+.buildScreen {
+    height: 90vh;
 }
 
-.buildScreen {
-    position: relative;
-    text-align: center;
-    color: white;
+.car {
+    align-content: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .buildScreen {
+      height: 52vh;
+    }
+  
 }
