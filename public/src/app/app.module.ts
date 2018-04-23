@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { Ng4TwitterTimelineModule } from 'ng4-twitter-timeline/lib/index';
 import { ModelInfoComponent } from './model-info/model-info.component';
 import { AgmCoreModule } from '@agm/core';
+import { CarDataService } from './car-data.service';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,7 @@ import { AgmCoreModule } from '@agm/core';
       apiKey: 'AIzaSyBt-_YitTA4qlfeIkQbaqZOXNiERL6USuA'
     })
   ],
-  providers: [],
+  providers: [CarDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
