@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  selectedModelID: Number = 1;
+
+  onModelIDChanged(modelID) {
+    this.selectedModelID = modelID;
+  }
+
   constructor() { }
 
   ngOnInit() {

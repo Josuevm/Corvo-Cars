@@ -19,8 +19,8 @@ export class ColorPickerComponent implements OnInit {
     {id: 'yellow', hexcode: '#F7FE32'}
   ];
 
-  onClick() {
-    console.log(this.selectedColor);
+  onColorChange(colorId) {
+    this.selectedColor = colorId;
     this.colorChanged.emit(this.selectedColor);
   }
 

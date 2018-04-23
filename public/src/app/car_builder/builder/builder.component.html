@@ -3,51 +3,17 @@
         <div class="row">
           
           <div class="col-xs-12 col-sm-12 col-md-1 optionsBar">
-            <!--SideBar-->
+            <!--OptionsBar-->
             <div *ngFor="let option of options" 
                   class="col-xs-2 col-sm-2 col-md-12 box foo" 
                   (click)="selectedOption = option.name" 
                   [class.active]="selectedOption == option.name">   
                   <i class="material-icons">{{option.icon}}</i>
             </div>
-            <div class='box foo button col-xs-1 col-sm-1 col-md-10'(click)="showModal()">Preview</div>    
           </div>
       
           <div class="col-xs-12 col-sm-12 col-md-11" >
-              <build-screen>
-                  <ng-container class="buildOption">
-                      <div [ngSwitch]="selectedOption">
-                          
-                          <div *ngSwitchCase="'color'">
-                              <color-picker></color-picker>     
-                          </div>
-                                
-                          <div *ngSwitchCase="'motor'">        
-                                  <!--Replace with component to be loaded--> 
-                                  <h1>Motor</h1>
-                          </div>
-                      
-                          <div *ngSwitchCase="'extras'">
-                              <!--Replace with component to be loaded--> 
-                                  <h1>Extras</h1>
-                          </div>
-                      
-                          <div *ngSwitchCase="'inside'">
-                                  <!--Replace with component to be loaded--> 
-                                  <h1>Inside</h1>
-                          </div>
-                      
-                          <div *ngSwitchCase="'rims'">
-                                  <!--Replace with component to be loaded--> 
-                                  <h1>Rims</h1>
-                          </div>
-                      
-                          <div *ngSwitchDefault>  
-                                  <color-picker></color-picker>
-                          </div>           
-                      </div>
-                  </ng-container>   
-              </build-screen>
+              <build-screen [buildOption]="selectedOption" [model]="selectedModelID"> </build-screen>
           </div>   
         </div>
       </div>      

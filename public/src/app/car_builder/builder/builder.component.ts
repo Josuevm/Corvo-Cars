@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'car-builder',
@@ -9,6 +9,7 @@ export class BuilderComponent implements OnInit {
 
   constructor() { }
 
+  @Input('modelID') selectedModelID: Number;
   selectedOption: String;
   is4x4: false;
 
@@ -38,8 +39,5 @@ export class BuilderComponent implements OnInit {
   ngOnInit() {
 
   }
-  showModal(){
-
- }
-
+  
 }

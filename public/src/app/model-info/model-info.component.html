@@ -1,13 +1,105 @@
 <div [ngSwitch]="model">
-  <div *ngSwitchCase="'Corvo Imperiale'"> 
-      <div class="imperiale-container">lllll</div>
-  </div>
-  <div *ngSwitchCase="'Corvo Kubanyi'">
-      <div class="kubanyi-container">lllll</div>
-  </div>
-  <div *ngSwitchCase="'Corvo Imparatus'">
-    <div class="imparatus-container">lllll</div>
-  </div>
-  <div *ngSwitchDefault class="imparatus-container">Default</div>
+
+    <!-- Si vamos a cargar imagenes desde base de datos- esto se puede mejorar y quitar el switch de josue y la repeticion de css y codigo  -->
+    <div *ngSwitchCase="'Corvo Imperiale'">
+        <div class="imperiale-container">
+            <div class="modelName">{{model}}</div>
+            <div class="iconsContainer">
+                <div *ngFor="let feature of features; let i = index">
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="side">
+                                <div class="icon" id="{{getID(feature)}}"></div>
+                            </div>
+                            <div class="side back">{{feature}}</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <a target='_BLANK'>
+                <div class='box foo col-sm-4  col-md-offset-4 col-sm-offset-4'>
+                    CUSTOMIZE YOUR OWN!
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <div *ngSwitchCase="'Corvo Kubanyi'">
+        <div class="kubanyi-container">
+            <div class="modelName">{{model}}</div>
+            <div class="iconsContainer">
+                <div *ngFor="let feature of features; let i = index">
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="side">
+                                <div class="icon" id="{{getID(feature)}}"></div>
+                            </div>
+                            <div class="side back">{{feature}}</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <a target='_BLANK'>
+
+                <div class='box foo box foo col-sm-4  col-md-offset-4 col-sm-offset-4'>
+                    CUSTOMIZE YOUR OWN!
+                </div>
+            </a>
+        </div>
+    </div>
+    <div *ngSwitchCase="'Corvo Imparatus'">
+        <div class="imparatus-container">
+            <div class="modelName">{{model}}</div>
+            <div class="iconsContainer">
+                <div *ngFor="let feature of features; let i = index">
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="side">
+                                <div class="icon" id="{{getID(feature)}}"></div>
+                            </div>
+                            <div class="side back">{{feature}}</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <a target='_BLANK'>
+                <div class='box foo  col-sm-4 col-md-offset-4 col-sm-offset-4'>
+                    CUSTOMIZE YOUR OWN!
+                </div>
+            </a>
+        </div>
+    </div>
+    <div *ngSwitchDefault class="imparatus-container">
+        <div class="modelName">{{model}}</div>
+        <div class="iconsContainer">
+            <div *ngFor="let feature of features; let i = index">
+
+                <div class="card-container">
+                    <div class="card">
+                        <div class="side">
+                            <div class="icon" id="{{getID(feature)}}"></div>
+                        </div>
+                        <div class="side back">{{feature}}</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <a target='_BLANK'>
+            <div class='box foo col-sm-4 col-md-offset-4 col-sm-offset-4'>
+                CUSTOMIZE YOUR OWN!
+            </div>
+        </a>
+    </div>
 
 </div>

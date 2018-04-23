@@ -4,7 +4,7 @@
       <div *ngFor="let color of colors"
             class="col-xs-1 col-sm-2 circle" 
             [style.background-color]='color.hexcode'
-            (click)="selectedColor = color.id"
+            (click)="onColorChange(color.id)"
            >
       </div>
     </div>

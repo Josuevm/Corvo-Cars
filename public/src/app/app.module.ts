@@ -17,6 +17,7 @@ import { BuilderComponent } from './car_builder/builder/builder.component';
 import { ColorPickerComponent } from './car_builder/color-picker/color-picker.component';
 import { BuildScreenComponent } from './car_builder/build-screen/build-screen.component';
 import { ModelInfoComponent } from './model-info/model-info.component';
+import { CarDataService } from './car-data.service';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { ModelInfoComponent } from './model-info/model-info.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CarDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,39 @@
 <div class="row buildScreen">
   
   <div class="car">
+      <!--Car image goes HERE-->
   </div>  
   
-  <ng-content select=".buildOption"></ng-content>
+  <div [ngSwitch]="buildOption">
+                          
+      <div *ngSwitchCase="'color'">
+          <color-picker (colorChanged)="setColor($event)"></color-picker>     
+      </div>
+            
+      <div *ngSwitchCase="'motor'">        
+              <!--Replace with component to be loaded--> 
+              <h1>Motor</h1>
+      </div>
+  
+      <div *ngSwitchCase="'extras'">
+          <!--Replace with component to be loaded--> 
+              <h1>Extras</h1>
+      </div>
+  
+      <div *ngSwitchCase="'inside'">
+              <!--Replace with component to be loaded--> 
+              <h1>Inside</h1>
+      </div>
+  
+      <div *ngSwitchCase="'rims'">
+              <!--Replace with component to be loaded--> 
+              <h1>Rims</h1>
+      </div>
+  
+      <div *ngSwitchDefault>  
+          <color-picker (colorChanged)="setColor($event)"></color-picker>
+      </div>           
+  </div>
 
+  <div class='box foo button'(click)="showPreview()">Preview</div>    
 </div>
