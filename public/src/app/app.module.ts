@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Ng4TwitterTimelineModule } from 'ng4-twitter-timeline/lib/index';
 import { ModelInfoComponent } from './model-info/model-info.component';
+import { CarDataService } from './car-data.service';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { ModelInfoComponent } from './model-info/model-info.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CarDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

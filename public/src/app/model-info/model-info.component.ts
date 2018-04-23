@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { CarDataService } from '../car-data.service';
 
 @Component({
   selector: 'app-model-info',
@@ -13,13 +13,15 @@ export class ModelInfoComponent implements OnInit {
   @Input('model')
   model: String =""
 
-  constructor(private http: HttpClient) { }
+  constructor(private carData: CarDataService) { }
 
   ngOnInit() {
   }
 
   ngOnChanges(){
-    this.getFeatures();
+    if(this.model.length !== 0){
+      this.carData.getFeatures(this.model).subscribe(res =>{ this.features = res});
+    }
   }
 
   getID(feature){
@@ -37,13 +39,13 @@ export class ModelInfoComponent implements OnInit {
     }
   }
 
-  getFeatures() {
-    if (this.model.length !== 0) {
-      this.http.get('/car_models/features/'+this.model)
-      .subscribe(data => {
-          this.features = data;
-          console.log(this.features);
-      })
-    }
-  }
+  // getFeatures() {
+  //   if (this.model.length !== 0) {
+  //     this.http.get('/car_models/features/'+this.model)
+  //     .subscribe(data => {
+  //         this.features = data;
+  //         console.log(this.features);
+  //     })
+  //   }
+  // }
 }
