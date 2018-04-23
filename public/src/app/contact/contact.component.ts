@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
+  lat: number = 10.04261876;
+  lng: number = -84.30005225;
   message = {
     name: "",
     email: "",

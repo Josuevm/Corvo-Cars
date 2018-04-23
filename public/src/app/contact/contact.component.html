@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <app-nav-bar></app-nav-bar>
 <!--Page title -->
 <div class="page-title-container">
@@ -43,11 +43,19 @@
       </div>
       <div class="col-sm-5 contact-address">
         <h3>We Are Here</h3>
-        <div class="map"></div>
+        <div class="map">
+          <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+        </div>
         <h3>Social Media</h3>
-          <a href="http://www.facebook.com">Facebook</a>
-          <a href="">Twitter</a>
-          <a href="">Instagram</a>
+         
+          <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline"> 
+            <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a> </li> 
+            <li><a href="#"><i class="fa fa-twitter"></i></a> </li> 
+            <li><a href="#"><i class="fa fa-instagram"></i></a> </li>   
+          </ul>
+
       </div>
     </div>
   </div>
