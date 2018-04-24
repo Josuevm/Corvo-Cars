@@ -6,9 +6,68 @@
     align-content: center;
 }
 
+
+.bodyImage{
+  background: url('../../../assets/images/Imperiale/Imperiale-1.png') no-repeat center center;
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
+
+}
+
+
+.extraImage{
+  background: url('../../../assets/images/Imperiale/Imperiale-2.png') no-repeat center center;
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+}
+
+.rimsImage{
+  background: url('../../../assets/images/Imperiale/Imperiale-3.png') no-repeat center center;
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+}
+
 @media only screen and (max-width: 992px) {
     .buildScreen {
       height: 52vh;
+    }
+
+    .bodyImage{
+      background: url('../../../assets/images/Imperiale/Imperiale-1.png') no-repeat center center;
+      -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+    
+    .extraImage{
+      background: url('../../../assets/images/Imperiale/Imperiale-2.png') no-repeat center center;
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+    
+    .rimsImage{
+      background: url('../../../assets/images/Imperiale/Imperiale-3.png') no-repeat center center;
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
     }
   
 }
