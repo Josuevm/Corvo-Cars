@@ -14,6 +14,9 @@ export class ContactComponent implements OnInit {
     body: ""
   }
 
+  showMessage : boolean = false;
+  alert :String = "";
+
   constructor() { }
 
   ngOnInit() {
@@ -21,7 +24,20 @@ export class ContactComponent implements OnInit {
   }
 
   sendMessage(){
-    alert("Name:"+this.message.name+", Email: "+this.message.email+" ,MEssage:"+this.message.body)
+    if(this.message.name.length !== 0 ||
+      this.message.email.length !== 0 ||
+      this.message.body.length !== 0){
+      this.alert = "Thank you for contacting us!"
+      this.showMessage = true;
+    }else{
+      this.alert = "You need to fill all the information";
+      this.showMessage = true;
+    }
+    
+  }
+
+  hideAlert(){
+    this.showMessage = false;
   }
 
   changeNavStyle(){
