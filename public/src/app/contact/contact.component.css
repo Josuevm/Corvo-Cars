@@ -9,8 +9,8 @@ img { max-width: 100%; }
 h1, h2 { line-height: 40px; }
 h3, h4 { line-height: 20px; }
 
-::-moz-selection { background: #9d426b; color: #fff; text-shadow: none; }
-::selection { background: #9d426b; color: #fff; text-shadow: none; }
+::-moz-selection {    background: #fcbd2b; color: #fff; text-shadow: none; }
+::selection {     background: #fcbd2b; color: #fff; text-shadow: none; }
 
 
 
@@ -26,8 +26,8 @@ h3, h4 { line-height: 20px; }
 .page-title-container h1 {
     display: inline;
     margin-left: 10px;
-    font-family: 'Josefin Sans', cursive;
-    font-size: 24px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
     color: #5d5d5d;
     font-weight: bold;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
@@ -36,9 +36,9 @@ h3, h4 { line-height: 20px; }
 
 .page-title-container p {
     display: inline;
-    font-family: 'Josefin Sans', 'sans-serif';
+    font-family: 'Rajdhani', 'sans-serif';
     margin-left: 5px;
-    font-size: 14px;
+    font-size: 18px;
     font-style: italic;
     vertical-align: middle;
 }
@@ -55,15 +55,15 @@ h3, h4 { line-height: 20px; }
     margin-top: 20px;
     padding-bottom: 50px;
     text-align: left;
-    font-family: 'Josefine Sans', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     color: #888;
     font-size: 12px;
 }
 
 .contact-us-container h3 {
     margin-top: 25px;
-    font-family: 'Josefine Sans', sans-serif;
-    font-size: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
     color: #5d5d5d;
     font-weight: bold;
     text-transform: uppercase;
@@ -72,7 +72,7 @@ h3, h4 { line-height: 20px; }
 
 .contact-us-container p {
     line-height: 28px;
-    font-size: 13px;
+    font-size: 17px;
 }
 
 .contact-form {
@@ -90,7 +90,7 @@ h3, h4 { line-height: 20px; }
 
 .contact-form input[type="text"] { width: 95%; height: 34px; }
 .contact-form textarea { width: 95%; height: 170px; padding-top: 6px; padding-bottom: 6px; }
-.contact-form label { font-size: 17px; font-weight: 400; }
+.contact-form label { font-size: 20px; font-weight: 400; }
 .contact-form label .error-label { font-style: italic }
 .contact-form button { margin-top: 5px; padding: 0 45px; }
 
@@ -101,7 +101,7 @@ textarea {
     vertical-align: middle;
     background: none;
     border: 1px solid #ddd;
-    font-family: 'Josefine Sans', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 13px;
     font-weight: 400;
     color: #888;
@@ -124,23 +124,29 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 
 
 button.btn {
+    
 	height: 30px;
     margin: 0;
     padding: 0 20px;
     vertical-align: middle;
     background: #9d426b;
-    border: 0;
-    font-family: 'Josefine Sans', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 30px;
-    color: #fff;
     text-shadow: none;
-    -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
     -moz-box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
     -webkit-box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
     box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+input.btn{
+    border: 2px solid rgb(93, 93, 93);
+    color: rgb(93, 93, 93);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    background-color: white;
 }
 
 button.btn:hover {
@@ -185,6 +191,7 @@ button.btn:focus {
     margin: 20px 0 40px 0;
     height: 300px;
     border: 5px solid #f8f8f8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram{
@@ -220,3 +227,10 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram{
     height: 300px;
   }
 
+  .alert-message>p{
+      font-size: 22px;
+  }
+
+  .alert-message{
+      cursor: pointer;
+  }

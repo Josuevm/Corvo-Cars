@@ -40,6 +40,11 @@
           </div>
           <input type="submit" class="btn" (click)="sendMessage()" value="Send">
         </form>
+        <div *ngIf="showMessage">
+          <div class="alert-message top-buffer" (click)="hideAlert()">
+            <p>{{alert}}</p>
+          </div>
+        </div>
       </div>
       <div class="col-sm-5 contact-address">
         <h3>We Are Here</h3>
@@ -48,14 +53,21 @@
             <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
           </agm-map>
         </div>
-        <h3>Social Media</h3>
+        <div class="col-sm-7">
+          <h3>Social Media</h3>
          
           <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline"> 
-            <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a> </li> 
-            <li><a href="#"><i class="fa fa-twitter"></i></a> </li> 
-            <li><a href="#"><i class="fa fa-instagram"></i></a> </li>   
+            <li><a href="https://www.facebook.com/Corvo-Cars-178109046180834" target="_blank"><i class="fa fa-facebook"></i></a> </li> 
+            <li><a href="https://twitter.com/Corvus_imperio" target="_blank"><i class="fa fa-twitter"></i></a> </li> 
+            <li><a href="https://www.instagram.com/corvo_cars/" target="_blank"><i class="fa fa-instagram"></i></a> </li>   
           </ul>
 
+        </div>
+        <div class="col-sm-5">
+          <h3>Phone Number</h3>
+          <p>+506 84538943</p>
+        </div>
+        
       </div>
     </div>
   </div>
