@@ -10,6 +10,7 @@ var car_modelsRouter = require('./routes/car_models');
 var interior_modelsRouter = require('./routes/interior_paths');
 var rims_modelsRouter = require('./routes/rims_paths');
 var motor_modelsRouter = require('./routes/motor_paths');
+var model_modelsRouter = require('./routes/model_models');
 var app = express();
 
 // view engine setup
@@ -28,7 +29,7 @@ app.use('/car_models', car_modelsRouter);
 app.use('/rims_paths',rims_modelsRouter);
 app.use('/motor_paths',motor_modelsRouter);
 app.use('/interior_paths', interior_modelsRouter);
-
+app.use('/model_models',model_modelsRouter);
 //mongoose db connection
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');//si no sirve poner <>
