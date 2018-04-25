@@ -8,7 +8,7 @@
 
 
 .bodyImage{
-  background: url('../../../assets/images/Imperiale/Imperiale-1.png') no-repeat center center;
+
   position: absolute;
   background-size: 100%;
     width: 80vw;
@@ -20,7 +20,7 @@
 
 
 .extraImage{
-  background: url('../../../assets/images/Imperiale/Imperiale-2.png') no-repeat center center;
+  
   position: absolute;
   background-size: 100%;
     width: 80vw;
@@ -29,7 +29,7 @@
 }
 
 .rimsImage{
-  background: url('../../../assets/images/Imperiale/Imperiale-3.png') no-repeat center center;
+
   position: absolute;
   background-size: 100%;
     width: 80vw;
