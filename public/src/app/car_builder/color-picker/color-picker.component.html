@@ -1,0 +1,13 @@
+<div class="colorPicker">
+
+    <div class="row colorPalet z-depth-2">
+      <div *ngFor="let color of colors"
+            class="col-xs-1 col-sm-2 circle" 
+            [style.background-color]='color.hexcode'
+            (click)="onColorChange(color.id)"
+           >
+      </div>
+    </div>
+
+</div>
+

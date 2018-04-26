@@ -1,0 +1,133 @@
+.buildScreen {
+    height: 90vh;
+}
+
+.car {
+    align-content: center;
+}
+
+
+.bodyImage{
+
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
+
+}
+
+
+.extraImage{
+  
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+}
+
+.rimsImage{
+
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+}
+
+@media only screen and (max-width: 992px) {
+    .buildScreen {
+      height: 52vh;
+    }
+
+    .bodyImage{
+      background: url('../../../assets/images/Imperiale/Imperiale-1.png') no-repeat center center;
+      -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+    
+    .extraImage{
+      background: url('../../../assets/images/Imperiale/Imperiale-2.png') no-repeat center center;
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+    
+    .rimsImage{
+      background: url('../../../assets/images/Imperiale/Imperiale-3.png') no-repeat center center;
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+  
+}
+
+.button {
+    position: absolute;
+    bottom: 5vh;
+    right: 2vw;
+    border: 3px solid white;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+.box {
+  margin: 1vh;
+  padding: 3vh;
+  height: 7vh;
+  width: 15vw;
+  color: #FFF;
+  text-align: center;
+  align-content: center;
+  transition: 0.5s;
+  cursor: pointer;
+  -webkit-transition:0.5s;
+}
+
+.box:hover {
+  border: 2px solid rgba(0,160,80,0);
+  color: #FFF;
+  background: radial-gradient( rgba(255,255,255, 0.5), rgba(255,255,255, 0.2), rgba(255,255,255, 0));
+}
+
+.box::before, .box::after {
+  width: 100%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: 0.35s;
+}
+
+.foo::before {
+  border-bottom: 3px solid #cb9f3d;
+  border-left: 3px solid #cb9f3d;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.foo::after {
+  border-top: 3px solid #cb9f3d;
+  border-right: 3px solid #cb9f3d;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+}
+
+.box:hover::after, .box:hover::before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

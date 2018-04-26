@@ -3,6 +3,7 @@
     <span class="helper"></span>
     <app-header></app-header>
 </div>
-<app-models></app-models>
+<app-models (modelIDChanged)='onModelIDChanged($event)'></app-models>
+<car-builder [modelID]='selectedModelID' ></car-builder>
 
 

@@ -1,0 +1,20 @@
+<div class="black">
+    <div class="container-fluid builder">
+        <div class="row">
+          
+          <div class="col-xs-12 col-sm-12 col-md-1 optionsBar">
+            <!--OptionsBar-->
+            <div *ngFor="let option of options" 
+                  class="col-xs-2 col-sm-2 col-md-12 box foo" 
+                  (click)="selectedOption = option.name" 
+                  [class.active]="selectedOption == option.name">   
+                  <i class="material-icons">{{option.icon}}</i>
+            </div>
+          </div>
+      
+          <div class="col-xs-12 col-sm-12 col-md-11" >
+              <build-screen [buildOption]="selectedOption" [model]="selectedModelID"> </build-screen>
+          </div>   
+        </div>
+      </div>      
+</div>

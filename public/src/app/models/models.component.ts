@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CarDataService } from '../car-data.service';
 
@@ -9,9 +9,9 @@ import { CarDataService } from '../car-data.service';
 })
 export class ModelsComponent implements OnInit {
 
+  @Output('modelIDChanged') modelIDChanged = new EventEmitter();
   models: any;
-
-  selectedModel: Number=1;
+  selectedModel: Number = 2;
   selectedModelName: String = "";
 
   constructor(private carData: CarDataService) { }
@@ -32,8 +32,8 @@ export class ModelsComponent implements OnInit {
   // }
 
   setSelectedModel(index){
-  
     this.selectedModel = index;
     this.selectedModelName = this.models[index].name;
+    this.modelIDChanged.emit(index);
   }
 }

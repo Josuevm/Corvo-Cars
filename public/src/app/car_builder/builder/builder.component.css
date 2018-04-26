@@ -1,0 +1,102 @@
+.black {
+  background-color: black;
+}
+
+.builder {
+    height: 90vh;
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 0px;
+    border: 1px solid lightslategrey;
+    background: url('../../../assets/images/floor.jpg') no-repeat center center;
+    background-size: 100%;
+}
+
+.optionsBar {
+    margin: 0px; 
+    height: 90vh;
+    width: 8vw;
+    box-shadow: 5px 0px 18px #222222;
+}
+
+.active {
+    background: radial-gradient( rgba(255,255,255, 0.6), rgba(255,255,255, 0.5), rgba(255,255,255, 0));
+    border: 3px solid #cb9f3d;
+    color: #cb9f3d;
+}
+
+.button {
+    background: radial-gradient( rgba(255,255,255, 0.6), rgba(255,255,255, 0.3), rgba(255,255,255, 0));
+    border: 1px solid white;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+.box {
+  margin: 1vh;
+  padding: 3vh;
+  height: 12vh;
+  width: 5vw;
+  color: #FFF;
+  text-align: center;
+  align-content: center;
+  transition: 0.5s;
+  cursor: pointer;
+  -webkit-transition:0.5s;
+}
+
+.box:hover {
+  border: 2px solid rgba(0,160,80,0);
+  color: #FFF;
+  background: radial-gradient( rgba(255,255,255, 0.5), rgba(255,255,255, 0.2), rgba(255,255,255, 0));
+}
+
+.box::before, .box::after {
+  width: 100%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: 0.35s;
+}
+
+.foo::before {
+  border-bottom: 3px solid #cb9f3d;
+  border-left: 3px solid #cb9f3d;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.foo::after {
+  border-top: 3px solid #cb9f3d;
+  border-right: 3px solid #cb9f3d;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+}
+
+.box:hover::after, .box:hover::before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 992px) {
+  .builder {
+    height: 65vh;
+  }
+
+  .optionsBar {
+    height: 12vh;
+    width: 90vw;
+    box-shadow: 5px 10px 18px #000000;
+  }
+
+  .box {
+    height: 6vh;
+    width: 8vw;
+  }
+
+}
