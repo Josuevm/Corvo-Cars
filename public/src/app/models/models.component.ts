@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CarDataService } from '../car-data.service';
+import { SelectedCarService } from '../selected-car.service';
 
 @Component({
   selector: 'app-models',
@@ -13,14 +14,15 @@ export class ModelsComponent implements OnInit {
   models: any;
   selectedModel: Number = 2;
   selectedModelName: String = "";
+  specs = {};
 
-  constructor(private carData: CarDataService) { }
+  constructor(private carData: CarDataService, private selectedCarSrv: SelectedCarService) { }
 
   ngOnInit() {
-    this.carData.getModels().subscribe(res =>{
+      this.carData.getModels().subscribe(res =>{
       this.models = res
       this.selectedModelName = this.models[1].name;
-    } );  
+    });
   }
 
   // getModels(){
@@ -35,5 +37,6 @@ export class ModelsComponent implements OnInit {
     this.selectedModel = index;
     this.selectedModelName = this.models[index].name;
     this.modelIDChanged.emit(index);
+    this.selectedCarSrv.getDefaultData(this.selectedModelName);
   }
 }

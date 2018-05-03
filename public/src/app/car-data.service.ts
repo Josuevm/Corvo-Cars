@@ -21,9 +21,7 @@ getDefault(idModel){
 }
   constructor(private http: HttpClient) { }
 
-  getFeatures(idModel){
-      return this.http.get('/car_models/features/'+idModel)
-  }
+  
 //assing this shit to the model array
   getModelImages(){
     return this.http.get('/model_models')

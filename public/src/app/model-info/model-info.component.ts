@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { CarDataService } from '../car-data.service';
+import { SelectedCarService } from '../selected-car.service';
 
 @Component({
   selector: 'app-model-info',
@@ -13,14 +13,14 @@ export class ModelInfoComponent implements OnInit {
   @Input('model')
   model: String =""
 
-  constructor(private carData: CarDataService) { }
+  constructor(private selectedCarSrv: SelectedCarService) { }
 
   ngOnInit() {
   }
 
   ngOnChanges(){
     if(this.model.length !== 0){
-      this.carData.getFeatures(this.model).subscribe(res =>{ this.features = res});
+      this.selectedCarSrv.getFeatures(this.model).subscribe(res =>{ this.features = res});
     }
   }
 

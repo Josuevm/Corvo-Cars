@@ -5,6 +5,7 @@ import {
   SafeUrl,
   SafeStyle
 } from '@angular/platform-browser';
+import { SelectedCarService } from '../../selected-car.service'
 
 @Component({
   selector: 'build-screen',
@@ -20,6 +21,8 @@ export class BuildScreenComponent implements OnInit {
     modelID: 0,
     colorID: ''
   };
+
+  specs = {};
 
   
 
@@ -46,9 +49,10 @@ export class BuildScreenComponent implements OnInit {
     ;
 
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer, private selectedCarSrv : SelectedCarService) { }
 
   ngOnInit() {
+    this.selectedCarSrv.specs.subscribe(res => this.specs = res);
   }
 
   ngOnChanges(){
@@ -64,6 +68,16 @@ export class BuildScreenComponent implements OnInit {
   showPreview() {
     this.car.modelID = this.model;
     alert('modelID: ' + this.car.modelID + ' colorID: ' + this.car.colorID);
+    this.changeColor();
+  }
+
+  changeColor(){//this method updates the car specs
+    this.specs = {
+      ...this.specs,
+      color: this.car.colorID
+    }
+
+    this.selectedCarSrv.changeSpecs(this.specs);
   }
 
   setColor(color) {

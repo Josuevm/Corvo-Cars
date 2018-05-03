@@ -19,6 +19,7 @@ import { BuildScreenComponent } from './car_builder/build-screen/build-screen.co
 import { ModelInfoComponent } from './model-info/model-info.component';
 import { AgmCoreModule } from '@agm/core';
 import { CarDataService } from './car-data.service';
+import { SelectedCarService } from './selected-car.service'
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { CarDataService } from './car-data.service';
     ColorPickerComponent,
     BuildScreenComponent,
     ModelInfoComponent
-   
+
   ],
   imports: [
     Ng4TwitterTimelineModule,
@@ -46,7 +47,10 @@ import { CarDataService } from './car-data.service';
       apiKey: 'AIzaSyBt-_YitTA4qlfeIkQbaqZOXNiERL6USuA'
     })
   ],
-  providers: [CarDataService],
+  providers: [
+    CarDataService,
+    SelectedCarService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
