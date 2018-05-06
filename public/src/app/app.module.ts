@@ -19,7 +19,8 @@ import { BuildScreenComponent } from './car_builder/build-screen/build-screen.co
 import { ModelInfoComponent } from './model-info/model-info.component';
 import { AgmCoreModule } from '@agm/core';
 import { CarDataService } from './car-data.service';
-import { SelectedCarService } from './selected-car.service'
+import { SelectedCarService } from './selected-car.service';
+import { GeneralFeaturePickerComponent } from './car_builder/general-feature-picker/general-feature-picker.component'
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SelectedCarService } from './selected-car.service'
     BuilderComponent,
     ColorPickerComponent,
     BuildScreenComponent,
-    ModelInfoComponent
+    ModelInfoComponent,
+    GeneralFeaturePickerComponent
 
   ],
   imports: [

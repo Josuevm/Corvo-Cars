@@ -13,7 +13,8 @@ export class SelectedCarService {
     color: "",
     rims: "",
     extras: "",
-    inside: ""
+    inside: "",
+    motor:""
   }
 
   constructor(private http: HttpClient) { }
@@ -36,7 +37,8 @@ export class SelectedCarService {
           color: res['color'],
           rims: res['rims'],
           extras: res['extras'],
-          inside: res['inside']
+          inside: res['inside'],
+          motor: res['motor']
         }
         this.changeSpecs(this.car);
       })

@@ -35,8 +35,7 @@
         </div>
 
         <div *ngSwitchCase="'inside'">
-            <!--Replace with component to be loaded-->
-            <h1>Inside</h1>
+            <app-general-feature-picker [type]="'interiors'"></app-general-feature-picker>
         </div>
 
         <div *ngSwitchCase="'rims'">

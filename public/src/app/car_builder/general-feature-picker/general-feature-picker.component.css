@@ -1,0 +1,15 @@
+.featureImage{
+    width: 100%;
+}
+
+.imageContainer{
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.featureCard{
+    padding-top: 10% 
+}
+
+.imageContainer.active{
+    border: 2px solid rgb(203, 159, 61);
+}

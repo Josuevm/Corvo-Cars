@@ -36,7 +36,7 @@ getDefault(idModel){
     return this.http.get('/motorPaths')
   }
   getInteriors(){
-    return this.http.get('/interiorPaths')
+    return this.http.get('/interior_paths')
   }
   selectModel(idModel:number){
    return this.model
