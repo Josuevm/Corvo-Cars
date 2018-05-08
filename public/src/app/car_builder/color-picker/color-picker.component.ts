@@ -22,30 +22,6 @@ export class ColorPickerComponent implements OnInit {
   onColorChange(colorId) {
     this.selectedColor = colorId;
     this.colorChanged.emit(this.selectedColor);
-
-    switch (colorId) {
-      case 'black':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 black)";
-        console.log("negro");
-        break;
-      case 'red':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 red)";
-        console.log("red");
-        break;
-      case 'white':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 white)";
-        console.log("white");
-        break;
-      case 'blue':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 blue)";
-        console.log("blue");
-        break;
-      case 'yellow':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 yellow)";
-        console.log("yellow");
-        break;
-    }
-
   }
 
   constructor() { }

@@ -30,7 +30,7 @@ getDefault(idModel){
     return this.http.get('/car_models')
   }
   getRims(){
-    return this.http.get('/rimsPaths')
+    return this.http.get('/rimsPaths') //dont return the observable, return just the json data
   }
   getMotors(){
     return this.http.get('/motorPaths')

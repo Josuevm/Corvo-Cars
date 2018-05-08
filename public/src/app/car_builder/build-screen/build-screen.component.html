@@ -21,7 +21,6 @@
 
         <div *ngSwitchCase="'color'">
             <color-picker (colorChanged)="setColor($event)"></color-picker>
-
         </div>
 
         <div *ngSwitchCase="'motor'">
@@ -39,8 +38,7 @@
         </div>
 
         <div *ngSwitchCase="'rims'">
-            <!--Replace with component to be loaded-->
-            <h1>Rims</h1>
+            <rims-picker (rimsChanged)="setRims($event)"></rims-picker>
         </div>
 
         <div *ngSwitchDefault>

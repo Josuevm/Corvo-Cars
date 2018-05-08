@@ -11,6 +11,13 @@
     background: radial-gradient( rgba(255,255,255, 0.7), rgba(255,255,255, 0.4), rgba(255,255,255, 0.1));
 }
 
+.col-xs-1 {
+   padding: 10px; 
+}
+
+.col-sm-2 {
+ padding: 10px;
+}
 .circle {
     height: 6vh;
     width: 6vh;

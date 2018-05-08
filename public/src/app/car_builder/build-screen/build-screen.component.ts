@@ -71,22 +71,58 @@ export class BuildScreenComponent implements OnInit {
     this.changeColor();
   }
 
-  changeColor(){//this method updates the car specs
+  changeColor() {//this method updates the car specs
     this.specs = {
       ...this.specs,
       color: this.car.colorID
     }
-
     this.selectedCarSrv.changeSpecs(this.specs);
   }
 
   setColor(color) {
     this.car.colorID = color;
     this.changeCarColor();
+    this.changeColor();
   }
 
   changeCarColor() {
-    //images logic goes HERE
+    switch (this.car.colorID) {
+      case 'black':
+        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 black)";
+        console.log("negro");
+        break;
+      case 'red':
+        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 red)";
+        console.log("red");
+        break;
+      case 'white':
+        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 white)";
+        console.log("white");
+        break;
+      case 'blue':
+        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 blue)";
+        console.log("blue");
+        break;
+      case 'yellow':
+        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 yellow)";
+        console.log("yellow");
+        break;
+    }
+  }
+
+  setRims(rims) {
+    this.specs = {
+      ...this.specs,
+      rims: rims.id
+    }
+    this.selectedCarSrv.changeSpecs(this.specs);
+    this.changeRimsImage(rims);
+  }
+
+  changeRimsImage(rimsID) {
+    console.log("Rims Changed: " + rimsID);
+    //change rims images LOCAL VARIABLE depending of 
+    //the car, with rimID and ModelID get the image from the service
   }
 
 

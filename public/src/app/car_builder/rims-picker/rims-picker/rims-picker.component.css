@@ -1,0 +1,20 @@
+.RimsPicker {
+    position: absolute;
+    bottom: 2vh;
+    left: 10vw;
+    height: 10vh;
+    align-content: center;
+    display: inline-flex;
+}
+
+.Rim{
+    position: relative;
+    height: 7vh;
+    width: 7vw;
+    background-color: white;
+    margin: 1vw;
+}
+
+.active {
+    border: solid 2px gold;
+}
