@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var MotorSchema = new mongoose.Schema({
-    motorId : Number,
+    name : String,
     path:String
 });
 

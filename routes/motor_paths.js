@@ -7,7 +7,7 @@ router.get('/',function (req,res,next)
 {
     Motor_paths.find(function (err, motorPaths) {
         if (err) return next(err);
-        console.log(res.json(motorPaths));
+        res.json(motorPaths);
     });
 });
  

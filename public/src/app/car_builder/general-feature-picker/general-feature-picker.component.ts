@@ -34,6 +34,7 @@ export class GeneralFeaturePickerComponent implements OnInit {
     this.selectedCarSrv.specs.subscribe(res => {
       this.specs = res
       this.setActiveDefaultInterior();
+      this.setActiveDefaultMotor();
       //Llamar tambien a los otros metodos que setean el default
     });
   }
@@ -110,6 +111,24 @@ export class GeneralFeaturePickerComponent implements OnInit {
       default:
         break;
     }
+  }
+  setActiveDefaultMotor(){
+    switch (this.specs.motor) {
+      case "V9":
+        this.selectedCardID = 0
+        break;
+      case "HiperS":
+        this.selectedCardID = 1
+        break;
+      case "Bigwc":
+        this.selectedCardID = 2
+        break;
+      case "HiperS":
+        this.selectedCardID = 3
+        break;
+      default:
+        break;
+    } 
   }
 
 }

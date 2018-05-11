@@ -33,7 +33,7 @@ getDefault(idModel){
     return this.http.get('/rimsPaths') //dont return the observable, return just the json data
   }
   getMotors(){
-    return this.http.get('/motorPaths')
+    return this.http.get('/motor_Paths')
   }
   getInteriors(){
     return this.http.get('/interior_paths')
