@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
@@ -8,6 +8,9 @@ export class SelectedCarService {
 
   private carSpecs = new BehaviorSubject<any>({});
   specs = this.carSpecs.asObservable();
+
+  @Output() specsChanged = new EventEmitter();
+
   car = {
     name: "",
     color: "",
@@ -22,6 +25,7 @@ export class SelectedCarService {
   changeSpecs(specs) {
     this.carSpecs.next(specs)
     console.log(this.carSpecs);
+    this.specsChanged.emit(specs);
   }
 
   getFeatures(idModel){
