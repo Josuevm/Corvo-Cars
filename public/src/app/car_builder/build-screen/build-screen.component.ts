@@ -5,7 +5,9 @@ import {
   SafeUrl,
   SafeStyle
 } from '@angular/platform-browser';
-import { SelectedCarService } from '../../selected-car.service'
+import { SelectedCarService } from '../../selected-car.service';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import {PreviewModalComponent} from '../../preview-modal/preview-modal.component'
 
 @Component({
   selector: 'build-screen',
@@ -24,7 +26,7 @@ export class BuildScreenComponent implements OnInit {
 
   specs = {};
 
-  
+  bsModalRef: BsModalRef;
 
   //esto despues se cambia ya con la logica de las images desde la base 
   carsImages = [
@@ -49,7 +51,9 @@ export class BuildScreenComponent implements OnInit {
     ;
 
 
-  constructor(private sanitizer: DomSanitizer, private selectedCarSrv : SelectedCarService) { }
+  constructor(private sanitizer: DomSanitizer, 
+    private selectedCarSrv : SelectedCarService,
+    private modalService: BsModalService) { }
 
   ngOnInit() {
     this.selectedCarSrv.specs.subscribe(res => this.specs = res);
@@ -69,6 +73,7 @@ export class BuildScreenComponent implements OnInit {
     this.car.modelID = this.model;
     alert('modelID: ' + this.car.modelID + ' colorID: ' + this.car.colorID);
     this.changeColor();
+    this.bsModalRef = this.modalService.show(PreviewModalComponent);
   }
 
   changeColor() {//this method updates the car specs
@@ -124,6 +129,8 @@ export class BuildScreenComponent implements OnInit {
     //change rims images LOCAL VARIABLE depending of 
     //the car, with rimID and ModelID get the image from the service
   }
+
+
 
 
 }

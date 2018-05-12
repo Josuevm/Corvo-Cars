@@ -24,6 +24,7 @@
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
     "ng4-twitter-timeline": "^1.0.8",
+    "ngx-bootstrap": "^2.0.5",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },

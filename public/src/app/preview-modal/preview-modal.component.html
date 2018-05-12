@@ -1,0 +1,32 @@
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title pull-left">{{specs.name}}</h2>
+        <button type="button" class="close pull-right" (click)="hideModal()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="details">
+            <div class="row">
+              <h3>Details</h3>
+              <div *ngFor='let detail of details'>
+                <div class="col-md-6">
+                  <div class="blockquote-box blockquote-primary clearfix">
+                    <div class="square pull-left">
+                      <i class="material-icons">{{detail.icon}}</i>
+                    </div>
+                    <h4><b>{{detail.name}}</b></h4>
+                    <p>{{detail.desc}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+          <button class="btn btn-default">Get PDF</button>
+      </div>
+    </div>

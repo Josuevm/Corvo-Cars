@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
@@ -21,7 +23,8 @@ import { AgmCoreModule } from '@agm/core';
 import { CarDataService } from './car-data.service';
 import { SelectedCarService } from './selected-car.service';
 import { GeneralFeaturePickerComponent } from './car_builder/general-feature-picker/general-feature-picker.component';
-import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker/rims-picker.component'
+import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker/rims-picker.component';
+import { PreviewModalComponent } from './preview-modal/preview-modal.component'
 
 
 @NgModule({
@@ -38,7 +41,8 @@ import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker/rims-
     BuildScreenComponent,
     ModelInfoComponent,
     GeneralFeaturePickerComponent,
-    RimsPickerComponent
+    RimsPickerComponent,
+    PreviewModalComponent
 
   ],
   imports: [
@@ -49,12 +53,14 @@ import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker/rims-
     HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBt-_YitTA4qlfeIkQbaqZOXNiERL6USuA'
-    })
+    }),
+    ModalModule.forRoot()
   ],
   providers: [
     CarDataService,
     SelectedCarService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PreviewModalComponent]
 })
 export class AppModule { }
