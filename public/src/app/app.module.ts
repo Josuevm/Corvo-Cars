@@ -23,7 +23,7 @@ import { AgmCoreModule } from '@agm/core';
 import { CarDataService } from './car-data.service';
 import { SelectedCarService } from './selected-car.service';
 import { GeneralFeaturePickerComponent } from './car_builder/general-feature-picker/general-feature-picker.component';
-import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker/rims-picker.component';
+import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker.component';
 import { PreviewModalComponent } from './preview-modal/preview-modal.component'
 
 

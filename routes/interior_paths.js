@@ -5,6 +5,7 @@ var Interior_paths = require('../models/Interior_paths.js');
 
 
     router.get('/', function (req, res, next) {
+  
         Interior_paths.find(function (err, products) {
             if (err) return next(err);
             console.log(products);

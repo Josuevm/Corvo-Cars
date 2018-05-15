@@ -7,7 +7,8 @@ import {
 } from '@angular/platform-browser';
 import { SelectedCarService } from '../../selected-car.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import {PreviewModalComponent} from '../../preview-modal/preview-modal.component'
+import {PreviewModalComponent} from '../../preview-modal/preview-modal.component';
+import { CarDataService } from '../../car-data.service';
 
 @Component({
   selector: 'build-screen',
@@ -24,28 +25,28 @@ export class BuildScreenComponent implements OnInit {
     colorID: ''
   };
 
-  specs = {};
+  specs: any;
 
   bsModalRef: BsModalRef;
 
-  //esto despues se cambia ya con la logica de las images desde la base 
+  rims: any;
+  
+  rimPath: any;
+
   carsImages = [
     [
       "../../../assets/images/Imparatus/SUV-1.png",
       "../../../assets/images/Imparatus/SUV-2.png",
-      "../../../assets/images/Imparatus/SUV-3.png"
     ]
     ,
     [
       "../../../assets/images/Kubanyi/RAM-1.png",
       "../../../assets/images/Kubanyi/RAM-2.png",
-      "../../../assets/images/Kubanyi/RAM-3.png"
     ]
     ,
     [
       "../../../assets/images/Imperiale/Imperiale-1.png",
       "../../../assets/images/Imperiale/Imperiale-2.png",
-      "../../../assets/images/Imperiale/Imperiale-3.png"
     ]
   ]
     ;
@@ -53,15 +54,20 @@ export class BuildScreenComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer, 
     private selectedCarSrv : SelectedCarService,
-    private modalService: BsModalService) { }
+    private modalService: BsModalService,
+    private carData: CarDataService) { }
 
   ngOnInit() {
     this.selectedCarSrv.specs.subscribe(res => this.specs = res);
+    this.carData.getRims().subscribe(res => {
+      this.rims = res;
+    });
   }
 
-  ngOnChanges(){
-   //cambia el id, de una vez en cadena se cambia lo grafico
+  ngOnChanges() {
+    //cambia el id, de una vez en cadena se cambia lo grafico
     this.car.modelID = this.model;
+    this.changeRimsImage(0); //cambia al rim basico, se supone que josue dice que el sleccionado varia dependiendo del carro, asi que hay que hacer esa logica
   }
 
   //recibe el tipo de imagen que se ocupa, se encarga de devolverla la parte adecuada del carro seleccionado 
@@ -128,6 +134,13 @@ export class BuildScreenComponent implements OnInit {
     console.log("Rims Changed: " + rimsID);
     //change rims images LOCAL VARIABLE depending of 
     //the car, with rimID and ModelID get the image from the service
+    for(let rim of this.rims){
+      if(rim.modelId == this.car.modelID && rim.rimId == rimsID){
+        console.log("encontrado!");
+        this.rimPath = rim.path;
+        return;
+      }
+    }
   }
 
 

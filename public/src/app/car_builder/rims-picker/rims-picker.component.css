@@ -5,16 +5,24 @@
     height: 10vh;
     align-content: center;
     display: inline-flex;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 20vw;
 }
 
 .Rim{
     position: relative;
     height: 7vh;
-    width: 7vw;
-    background-color: white;
-    margin: 1vw;
+    width: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vh;
+    cursor: pointer;
 }
 
 .active {
     border: solid 2px gold;
+}
+
+#description{
+    font-family: 'Rajdhani', sans-serif;
+    color: #FFF;
 }

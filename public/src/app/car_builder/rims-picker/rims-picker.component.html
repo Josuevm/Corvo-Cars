@@ -1,10 +1,12 @@
 <div class="container RimsPicker">
-  <div class="row">
+ 
     <div *ngFor="let rim of rims" 
       (click)="onRimChange(rim)"
       [class.active]="selectedRimID == rim.id"
       class="col-md-2 Rim">
-      {{rim.img}}
+      <img src="{{rim.img}}" class="rimsIcon">
+     
     </div>
-  </div>
+
+    <div id="description">{{description}}</div>
 </div>
