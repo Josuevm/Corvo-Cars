@@ -1,0 +1,38 @@
+<!--   <div *ngFor="let rim of rims" 
+    (click)="onRimChange(rim)"
+    [class.active]="selectedRimID == rim.id"
+    class="col-md-2 Rim">
+    <img src="{{rim.img}}" class="rimsIcon">
+
+       <img src="{{extra.path}}" class="extraIcon">
+       
+  </div> -->
+
+<div class="featureCard">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 extrasContainer">
+
+        <div *ngFor="let extra of data; let i = index">
+
+          <div class="col-sm-4">
+         
+              <div class="imageContainer" (click)='addExtra(extra)' [class.active]="isActive(extra)">
+                <div class="card">
+                  <div class="side">
+
+                    <img src="{{extra.path}}" class="featureImage">
+
+                  </div>
+                  <div class="side back">{{extra.name}}</div>
+                </div>
+              </div>
+            
+            .
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

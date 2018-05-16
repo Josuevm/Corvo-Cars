@@ -1,0 +1,59 @@
+.featureImage{
+    width: 100%;
+}
+
+.extrasContainer{
+    background: rgba(0, 0, 0, 0.5);
+    margin-left: 15vw;
+    padding-left: 1vw;
+    padding-top: 2vw;
+}
+
+.imageContainer{
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Rajdhani', sans-serif;
+    position: static;
+    border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 2vh;
+    cursor: pointer;
+    height: 8vw;
+    width: 8vw;
+}
+
+.featureCard{
+    padding-top: 10% 
+}
+
+.imageContainer:hover{
+    border: 2px solid rgb(203, 159, 61);
+}
+
+.imageContainer.active{
+    border: 2px solid rgb(203, 159, 61);
+}
+
+
+.card {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 8vw;
+  }
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  .card .side {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  .card .back {
+    margin-top: 32%;
+    transform: rotateY(180deg);
+    color: #cb9f3d;
+  }

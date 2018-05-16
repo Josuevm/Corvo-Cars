@@ -39,6 +39,10 @@ getDefault(idModel){
     return this.http.get('/interior_paths')
   }
 
+  getExtras(){
+    return this.http.get('/extras_paths')
+  }
+
   selectModel(idModel:number){
    return this.model
   }
