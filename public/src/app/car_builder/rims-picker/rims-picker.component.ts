@@ -45,7 +45,7 @@ export class RimsPickerComponent implements OnInit {
   onRimChange(rims) {
     this.selectedRimID = rims.id;
     this.description = rims.description
-    this.rimsChanged.emit(rims.id);//send the rimID to the build screen
+    this.rimsChanged.emit(rims);//send the rimID to the build screen
   }
 
 }

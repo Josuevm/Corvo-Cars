@@ -7,7 +7,7 @@ import {
 } from '@angular/platform-browser';
 import { SelectedCarService } from '../../selected-car.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import {PreviewModalComponent} from '../../preview-modal/preview-modal.component';
+import { PreviewModalComponent } from '../../preview-modal/preview-modal.component';
 import { CarDataService } from '../../car-data.service';
 
 @Component({
@@ -30,7 +30,7 @@ export class BuildScreenComponent implements OnInit {
   bsModalRef: BsModalRef;
 
   rims: any;
-  
+
   rimPath: any;
 
   carsImages = [
@@ -52,8 +52,8 @@ export class BuildScreenComponent implements OnInit {
     ;
 
 
-  constructor(private sanitizer: DomSanitizer, 
-    private selectedCarSrv : SelectedCarService,
+  constructor(private sanitizer: DomSanitizer,
+    private selectedCarSrv: SelectedCarService,
     private modalService: BsModalService,
     private carData: CarDataService) { }
 
@@ -124,19 +124,16 @@ export class BuildScreenComponent implements OnInit {
   setRims(rims) {
     this.specs = {
       ...this.specs,
-      rims: rims.id
+      rims: rims.description
     }
     this.selectedCarSrv.changeSpecs(this.specs);
-    this.changeRimsImage(rims);
+    this.changeRimsImage(rims.id);
   }
 
   changeRimsImage(rimsID) {
     console.log("Rims Changed: " + rimsID);
-    //change rims images LOCAL VARIABLE depending of 
-    //the car, with rimID and ModelID get the image from the service
-    for(let rim of this.rims){
-      if(rim.modelId == this.car.modelID && rim.rimId == rimsID){
-        console.log("encontrado!");
+    for (let rim of this.rims) {
+      if (rim.modelId == this.car.modelID && rim.rimId == rimsID) {
         this.rimPath = rim.path;
         return;
       }
