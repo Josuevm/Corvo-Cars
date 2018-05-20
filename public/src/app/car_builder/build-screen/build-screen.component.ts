@@ -34,14 +34,14 @@ export class BuildScreenComponent implements OnInit {
   rimPath: any;
 
   carsImages = [
-    [
-      "../../../assets/images/Imparatus/SUV-1.png",
-      "../../../assets/images/Imparatus/SUV-2.png",
-    ]
-    ,
+
     [
       "../../../assets/images/Kubanyi/RAM-1.png",
       "../../../assets/images/Kubanyi/RAM-2.png",
+    ],
+     [
+      "../../../assets/images/Imparatus/SUV-1.png",
+      "../../../assets/images/Imparatus/SUV-2.png",
     ]
     ,
     [

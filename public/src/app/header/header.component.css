@@ -1,12 +1,25 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: #888;
+    color: #FFF;
     line-height: 30px;
     text-align: center;
 }
 
+.description{
+    text-align: center;
+    color: #FFF;
+    font-size: 3vw;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.featureCar{
+    text-align: center;
+    color: #FFF;
+    font-size: 8vw;
+    font-family: 'Rajdhani', sans-serif;
+}
 strong { font-weight: 500; }
 
 a, a:hover, a:focus {
@@ -14,12 +27,9 @@ a, a:hover, a:focus {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
-h1, h2 { margin-top: 10px; font-family: 'Josefin Sans', sans-serif; font-size: 48px; font-weight: 300; color: #555; line-height: 56px; }
-h3 { font-family: 'Josefin Sans', sans-serif; font-size: 32px; font-weight: 300; color: #555; line-height: 40px; }
 
 img { max-width: 100%; }
 
-.medium-paragraph { font-size: 18px; line-height: 34px; }
 
 .colored { color: #cb9f3d; }
 
@@ -46,7 +56,6 @@ img { max-width: 100%; }
 .top-content .text h1 { color: #fff; }
 
 .top-content .description { margin: 1em 0; }
-.top-content .description p { opacity: 0.8; }
 .top-content .description a { color: #fff; border-bottom: 1px dotted #fff; }
 .top-content .description a:hover, .top-content .description a:focus { color: #fff; border: 0; }
 
