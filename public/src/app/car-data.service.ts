@@ -46,6 +46,10 @@ getDefault(idModel){
   selectModel(idModel:number){
    return this.model
   }
+
+  getModel(modelName){
+    return this.http.get('/car_models/models/' + modelName)
+  }
  
   
 }

@@ -1,0 +1,43 @@
+.model-container{
+    border: 4px solid rgb(10, 10, 10);
+    text-align: center;
+    cursor: move;
+}
+
+.model-image{
+    width: 100%;
+}
+
+.model-image>img{
+    max-height:100%; 
+    max-width:100%;
+}
+
+.dropable-container{
+    border: 2px solid rgb(93, 93, 93);
+    text-align: center;
+    border-style: dashed;
+    color:rgb(93, 93, 93);
+}
+
+.model-image-dropped{
+    width: 100%;
+}
+
+.model-image-dropped>img{
+    max-height:100%; 
+    max-width:100%;
+}
+
+.model-container-dropped{
+    text-align: center;
+    cursor:default;
+}
+
+.fa{
+    cursor:pointer;
+}
+
+.dragged{
+    visibility: hidden;
+}

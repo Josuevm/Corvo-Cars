@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import {DndModule} from 'ng2-dnd';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
 
@@ -26,7 +27,9 @@ import { GeneralFeaturePickerComponent } from './car_builder/general-feature-pic
 import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker.component';
 import { PreviewModalComponent } from './preview-modal/preview-modal.component';
 import { ExtrasPickerComponent } from './car_builder/extras-picker/extras-picker.component';
-import { CarSelectorComponent } from './comparative_chart/car-selector/car-selector.component'
+import { CarSelectorComponent } from './comparative_chart/car-selector/car-selector.component';
+import { ComparativeViewComponent } from './comparative_chart/comparative-view/comparative-view.component';
+import { ComparativeDetailsComponent } from './comparative_chart/comparative-details/comparative-details.component'
 
 
 @NgModule({
@@ -46,7 +49,9 @@ import { CarSelectorComponent } from './comparative_chart/car-selector/car-selec
     RimsPickerComponent,
     PreviewModalComponent,
     ExtrasPickerComponent,
-    CarSelectorComponent
+    CarSelectorComponent,
+    ComparativeViewComponent,
+    ComparativeDetailsComponent
 
   ],
   imports: [
@@ -58,7 +63,8 @@ import { CarSelectorComponent } from './comparative_chart/car-selector/car-selec
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBt-_YitTA4qlfeIkQbaqZOXNiERL6USuA'
     }),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    DndModule.forRoot()
   ],
   providers: [
     CarDataService,
