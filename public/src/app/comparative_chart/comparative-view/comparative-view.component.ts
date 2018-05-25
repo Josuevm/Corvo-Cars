@@ -9,8 +9,6 @@ export class ComparativeViewComponent implements OnInit {
 
   constructor() { }
 
-  eventData : any;
-
   ngOnInit() {
     this.changeNavStyle();
   }
@@ -23,11 +21,4 @@ export class ComparativeViewComponent implements OnInit {
     document.getElementById("navLink3").style.color = "#fff";
   }
 
-  setCars(event:Event){
-    this.eventData = event;
-  }
-
-  dismissData(event:Event){
-    this.eventData = event;
-  }
 }
