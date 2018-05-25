@@ -37,7 +37,9 @@
               </div>
           </div>
       </div>
-      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <app-comparative-details [cars]="cars"></app-comparative-details>
+      </div>
       <div class="col-sm-4">
           <div dnd-droppable class="cont dropable-container" (onDropSuccess)="dropedSecond($event)">
               <div class="dropable-body">

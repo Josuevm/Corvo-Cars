@@ -17,6 +17,7 @@ export class CarSelectorComponent implements OnInit {
   secondData :any;
   firstCarName = "";
   secondCarName= " "
+  cars={};
 
   constructor(private carData: CarDataService, private el: ElementRef) { }
 
@@ -38,11 +39,11 @@ export class CarSelectorComponent implements OnInit {
 
   areComparable(){ //Checks if there are 2 options selected. If is the case emits an object with both car names
     if(this.firstData && this.secondData){
-      let cars = {
+      this.cars = {
         option1: this.firstData.dragData.name,
         option2: this.secondData.dragData.name
       }
-      this.carsSelected.emit(cars);
+      // this.carsSelected.emit(this.cars);
     }
   }
 
@@ -64,14 +65,14 @@ export class CarSelectorComponent implements OnInit {
     this.firstIsDropped = false;
     this.firstData = null;
     this.firstCarName = "";
-    this.returnedCar.emit({});
+    this.cars = {};
   }
 
   deleteSecondData(){
     this.secondIsDropped = false;
     this.secondData = null;
     this.secondCarName = "";
-    this.returnedCar.emit({});
+    this.cars = {};
   }
 
   matchHeight() {
