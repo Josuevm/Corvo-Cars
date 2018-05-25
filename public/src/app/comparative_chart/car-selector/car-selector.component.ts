@@ -8,8 +8,6 @@ import { CarDataService } from '../../car-data.service';
 })
 export class CarSelectorComponent implements OnInit {
 
-  @Output() carsSelected = new EventEmitter();
-  @Output() returnedCar = new EventEmitter();
   models:any;
   firstIsDropped: Boolean = false;
   secondIsDropped: Boolean = false;
@@ -43,7 +41,6 @@ export class CarSelectorComponent implements OnInit {
         option1: this.firstData.dragData.name,
         option2: this.secondData.dragData.name
       }
-      // this.carsSelected.emit(this.cars);
     }
   }
 
