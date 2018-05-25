@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, AfterViewChecked, ElementRef, HostListener } from '@angular/core';
 import { CarDataService } from '../../car-data.service';
 
 @Component({
@@ -18,13 +18,23 @@ export class CarSelectorComponent implements OnInit {
   firstCarName = "";
   secondCarName= " "
 
-  constructor(private carData: CarDataService) { }
+  constructor(private carData: CarDataService, private el: ElementRef) { }
 
   ngOnInit() {
     this.carData.getModels().subscribe(res =>{
       this.models = res
     });
   }
+
+  ngAfterViewChecked(){
+    this.matchHeight();
+  }
+
+  @HostListener('window:resize') 
+    onResize() {
+      console.log("Resize-...........")
+        this.matchHeight();
+    }
 
   areComparable(){ //Checks if there are 2 options selected. If is the case emits an object with both car names
     if(this.firstData && this.secondData){
@@ -63,5 +73,25 @@ export class CarSelectorComponent implements OnInit {
     this.secondCarName = "";
     this.returnedCar.emit({});
   }
+
+  matchHeight() {
+    const children = document.getElementsByClassName("cont");
+
+    if (!children) return;
+
+    Array.from(children).forEach((x: HTMLElement) => {
+      x.style.height = 'initial';
+    });
+
+    const itemHeights = Array.from(children)
+        .map(x => x.getBoundingClientRect().height);
+
+    const maxHeight = itemHeights.reduce((prev, curr) => {
+        return curr > prev ? curr : prev;
+    }, 0);
+
+    Array.from(children)
+        .forEach((x: HTMLElement) => x.style.height = `${maxHeight}px`);
+}
 
 }

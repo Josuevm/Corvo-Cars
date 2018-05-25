@@ -2,10 +2,10 @@
   <div class="row top-buffer">
     <div class="col-sm-12">
       <div *ngFor="let model of models; let i = index">
-          <div class="col-md-4" dnd-draggable [dragEnabled]="true" 
+          <div class="col-sm-4" dnd-draggable [dragEnabled]="true" 
           [dragData]="{name: model.name, image:model.image}"
           [class.dragged]="model.name == firstCarName || model.name == secondCarName">
-            <div class="model-container">
+            <div class="cont model-container" >
               <div class="model-title">
                   <h3>{{model.name}}</h3>
               </div>
@@ -18,10 +18,10 @@
       </div>
       </div>
       <div class="row top-buffer">
-      <div class="col-md-4 col-md-offset-1">
-          <div dnd-droppable class="dropable-container" (onDropSuccess)="dropedFirst($event)">
+      <div class="col-sm-4">
+          <div dnd-droppable class="cont dropable-container" (onDropSuccess)="dropedFirst($event)" >
               <div class="dropable-body">
-                <h4 [hidden]="firstIsDropped">Drop here</h4>
+                <h3 [hidden]="firstIsDropped" class="drop-text">Drag and drop</h3>
                   <div *ngIf="firstIsDropped">
                       <div class="model-container-dropped">
                           <div class="model-title">
@@ -37,11 +37,11 @@
               </div>
           </div>
       </div>
-      <div class="col-md-2"></div>
-      <div class="col-md-4">
-          <div dnd-droppable class="dropable-container" (onDropSuccess)="dropedSecond($event)">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+          <div dnd-droppable class="cont dropable-container" (onDropSuccess)="dropedSecond($event)">
               <div class="dropable-body">
-                  <h4 [hidden]="secondIsDropped">Drop here</h4>
+                  <h3 [hidden]="secondIsDropped" class="drop-text">Drag and drop</h3>
                     <div *ngIf="secondIsDropped">
                         <div class="model-container-dropped">
                             <div class="model-title">
