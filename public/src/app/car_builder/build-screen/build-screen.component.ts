@@ -9,6 +9,7 @@ import { SelectedCarService } from '../../selected-car.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { PreviewModalComponent } from '../../preview-modal/preview-modal.component';
 import { CarDataService } from '../../car-data.service';
+import { filter } from 'rxjs/operator/filter';
 
 @Component({
   selector: 'build-screen',
@@ -39,7 +40,7 @@ export class BuildScreenComponent implements OnInit {
       "../../../assets/images/Kubanyi/RAM-1.png",
       "../../../assets/images/Kubanyi/RAM-2.png",
     ],
-     [
+    [
       "../../../assets/images/Imparatus/SUV-1.png",
       "../../../assets/images/Imparatus/SUV-2.png",
     ]
@@ -50,6 +51,15 @@ export class BuildScreenComponent implements OnInit {
     ]
   ]
     ;
+
+
+  bodyImageStyle = {
+    backgroundImage: 'url(' + this.getBackground(0) + ')',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
+    backgroundSize: '90%',
+    filter: 'opacity(.5) drop-shadow(0 0 0 white)' // se cambia para cambiar el color tito
+  }
 
 
   constructor(private sanitizer: DomSanitizer,
@@ -67,7 +77,8 @@ export class BuildScreenComponent implements OnInit {
   ngOnChanges() {
     //cambia el id, de una vez en cadena se cambia lo grafico
     this.car.modelID = this.model;
-    this.changeRimsImage(0); //cambia al rim basico, se supone que josue dice que el sleccionado varia dependiendo del carro, asi que hay que hacer esa logica
+    this.bodyImageStyle.backgroundImage = 'url(' + this.getBackground(0) + ')', // cambia la imagen del modelo
+      this.changeRimsImage(0); //cambia al rim basico, se supone que josue dice que el sleccionado varia dependiendo del carro, asi que hay que hacer esa logica
   }
 
   //recibe el tipo de imagen que se ocupa, se encarga de devolverla la parte adecuada del carro seleccionado 
@@ -99,24 +110,19 @@ export class BuildScreenComponent implements OnInit {
   changeCarColor() {
     switch (this.car.colorID) {
       case 'black':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 black)";
-        console.log("negro");
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 black)";
         break;
       case 'red':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 red)";
-        console.log("red");
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 red)";
         break;
       case 'white':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 white)";
-        console.log("white");
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 white)";
         break;
       case 'blue':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 blue)";
-        console.log("blue");
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 blue)";
         break;
       case 'yellow':
-        document.getElementById("bodyImage").style.filter = "opacity(.5) drop-shadow(0 0 0 yellow)";
-        console.log("yellow");
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 yellow)";
         break;
     }
   }
