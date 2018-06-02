@@ -25,7 +25,8 @@ import { SelectedCarService } from './selected-car.service';
 import { GeneralFeaturePickerComponent } from './car_builder/general-feature-picker/general-feature-picker.component';
 import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker.component';
 import { PreviewModalComponent } from './preview-modal/preview-modal.component';
-import { ExtrasPickerComponent } from './car_builder/extras-picker/extras-picker.component'
+import { ExtrasPickerComponent } from './car_builder/extras-picker/extras-picker.component';
+import { CarComponent } from './car_builder/car/car.component'
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ExtrasPickerComponent } from './car_builder/extras-picker/extras-picker
     GeneralFeaturePickerComponent,
     RimsPickerComponent,
     PreviewModalComponent,
-    ExtrasPickerComponent
+    ExtrasPickerComponent,
+    CarComponent
 
   ],
   imports: [

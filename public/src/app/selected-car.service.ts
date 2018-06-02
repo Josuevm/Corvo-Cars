@@ -12,9 +12,11 @@ export class SelectedCarService {
   @Output() specsChanged = new EventEmitter();
 
   car = {
+    modelID: 0,
     name: "",
     color: "",
     rims: "",
+    rimsID: 0,
     extras: "",
     inside: "",
     motor:""
@@ -23,8 +25,7 @@ export class SelectedCarService {
   constructor(private http: HttpClient) { }
 
   changeSpecs(specs) {
-    this.carSpecs.next(specs)
-    console.log(this.carSpecs);
+    this.carSpecs.next(specs);
     this.specsChanged.emit(specs);
   }
 
@@ -36,10 +37,25 @@ export class SelectedCarService {
   getDefaultData(modelName) { //this should be called before subcribe to the service and call the changeSpecs method
     this.http.get('/car_models/models/' + modelName)
       .subscribe(res => {
+        //cambiar eso
+                      let modelID;
+                      switch(res['name']) {
+                        case 'Corvo Imperiale': 
+                          modelID = 2;
+                          break;
+                        case 'Corvo Kubanyi': 
+                        modelID = 0;
+                        break;
+                        case 'Corvo Imparatus': 
+                        modelID = 1;
+                        break;
+                      }
         this.car = {
+          modelID: modelID,
           name: res['name'],
           color: res['color'],
           rims: res['rims'],
+          rimsID: 0,
           extras: res['extras'],
           inside: res['inside'],
           motor: res['motor']

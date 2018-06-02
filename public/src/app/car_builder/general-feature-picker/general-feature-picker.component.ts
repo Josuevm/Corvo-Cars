@@ -22,7 +22,7 @@ export class GeneralFeaturePickerComponent implements OnInit {
   selectedCardID: Number = 0;
 
   @Input('type')
-  type: String = ""
+  type: String = "";
 
   constructor(private carData: CarDataService,
     private selectedCarSrv: SelectedCarService) { }

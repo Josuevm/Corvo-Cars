@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CarDataService } from '../../car-data.service'
+import { SelectedCarService } from '../../selected-car.service';
 
 
 @Component({
@@ -22,23 +23,23 @@ export class RimsPickerComponent implements OnInit {
     { id: '2', img: 'rims3', description: '' },
   ];
 
-  data: any;
-
-  constructor(private carData: CarDataService) {
-
-  }
+  constructor(private carData: CarDataService, private carService: SelectedCarService) {}
 
   ngOnInit() {
     //load images on rims array from carImages
     this.carData.getRims().subscribe(res => {
-      this.data = res;
-      for (let dat of this.data) {
+      let data: any = res;
+      for (let dat of data) {
           if(dat.description != undefined){
             this.rims[dat.rimId].img = dat.path;
             this.rims[dat.rimId].description = dat.description;
           }
        }
-    
+    });
+    //Need to update selected Rims to be sinchronized with the selected car when model change
+    this.carService.specs.subscribe(specs => {
+      this.selectedRimID = specs.rimsID;
+      this.description = specs.rims;
     });
   }
 
