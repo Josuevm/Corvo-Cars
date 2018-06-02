@@ -46,7 +46,6 @@
 
 @media only screen and (max-width: 992px) {
     .bodyImage{
-
       -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
       position: absolute;
       background-size: 100%;
@@ -55,7 +54,7 @@
         margin-top: 5%;
     }
 
-    .bodyImage{
+    .baseImage{
       position: absolute;
       background-size: 100%;
         width: 80vw;

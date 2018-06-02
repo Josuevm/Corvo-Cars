@@ -12,11 +12,14 @@ export class ColorPickerComponent implements OnInit {
   @Output() colorChanged = new EventEmitter();
 
   colors = [
-    { id: 'black', hexcode: '#010101' },
-    { id: 'red', hexcode: '#E50101' },
-    { id: 'white', hexcode: '#FEFEFE' },
-    { id: 'blue', hexcode: '#1301B5' },
-    { id: 'yellow', hexcode: '#F7FE32' }
+    { id: 'black', hexcode: 'linear-gradient(black, dimgray, black)' },
+    { id: 'gray', hexcode: 'linear-gradient(darkslategray, darkgray, darkslategray)' },
+    { id: 'white', hexcode: 'linear-gradient(gray, white, gray)' },
+    { id: 'yellow', hexcode: 'linear-gradient(orange, yellow, orange)' },
+    { id: 'red', hexcode: 'linear-gradient(black, firebrick, black)' },
+    { id: 'purple', hexcode: 'linear-gradient(black, mediumpurple, black)' },
+    { id: 'blue', hexcode: 'linear-gradient(black, darkblue, black)' },
+    { id: 'green', hexcode: 'linear-gradient(gray, lime, gray)' }
   ];
 
   onColorChange(colorId) {

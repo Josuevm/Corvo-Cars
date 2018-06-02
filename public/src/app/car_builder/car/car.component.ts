@@ -66,9 +66,6 @@ export class CarComponent implements OnInit {
     if (this.rims) {
       for (let rim of this.rims) {
         if (rim.modelId == modelID && rim.rimId == rimsID) {
-          console.log('modelID ' + modelID);
-          console.log('rimsID ' + rimsID);
-          console.log(rim.path);
           this.rimsImg = rim.path;
           return;
         }
@@ -92,22 +89,31 @@ export class CarComponent implements OnInit {
   changeCarColor(color) {
     switch (color) {
       case 'black':
-        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 black)";
+        this.bodyImageStyle.filter = "opacity(.72) drop-shadow(0 0 0 black) saturate(100%) brightness(7.7%)";
         break;
       case 'red':
-        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 red)";
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 red) saturate(550%) brightness(65%)";
         break;
       case 'white':
-        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 white)";
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 white) saturate(100%) brightness(1000%)";
+        break;
+      case 'purple':
+        this.bodyImageStyle.filter = "opacity(.7) drop-shadow(0 0 0 mediumpurple) saturate(700%) brightness(45%)";
         break;
       case 'blue':
-        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 blue) saturate(240%) brightness(120%)";
+        this.bodyImageStyle.filter = "opacity(0.77) drop-shadow(darkblue 0px 0px 0px) saturate(2000%) brightness(38%)";
         break;
       case 'yellow':
-        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 yellow)";
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 gold) saturate(600%) brightness(135%)";
+        break;
+      case 'gray':
+        this.bodyImageStyle.filter = "opacity(.2) drop-shadow(0 0 0 black) saturate(100%) brightness(305%)";
+        break;
+      case 'green':
+        this.bodyImageStyle.filter = "opacity(0.77) drop-shadow(lime 0px 0px 0px) saturate(130%) brightness(188%)";
         break;
       default:
-        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 white)";
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 white) saturate(100%) brightness(500%)";
     }
   }
 
