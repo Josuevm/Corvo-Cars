@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row top-buffer">
+    <div class="col-sm-12">
+      <div *ngFor="let model of models; let i = index">
+          <div class="col-sm-4" dnd-draggable [dragEnabled]="true" 
+          [dragData]="{name: model.name, image:model.image}"
+          [class.dragged]="model.name == firstCarName || model.name == secondCarName">
+            <div class="cont model-container" >
+              <div class="model-title">
+                  <h3>{{model.name}}</h3>
+              </div>
+              <div class="model-image">
+                  <img src="{{model.image}}" alt="">
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+      </div>
+      <div class="row top-buffer">
+      <div class="col-sm-4">
+          <div dnd-droppable class="cont dropable-container" (onDropSuccess)="dropedFirst($event)" >
+              <div class="dropable-body">
+                <h3 [hidden]="firstIsDropped" class="drop-text">Drag and drop</h3>
+                  <div *ngIf="firstIsDropped">
+                      <div class="model-container-dropped">
+                          <div class="model-title">
+                              <h3>{{firstData.dragData.name}} 
+                                  <i class="fa fa-times" aria-hidden="true" (click)="deleteFirstData()"></i>
+                                </h3>
+                          </div>
+                          <div class="model-image-dropped">
+                              <img src="{{firstData.dragData.image}}" alt="">
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+        <app-comparative-details [cars]="cars"></app-comparative-details>
+      </div>
+      <div class="col-sm-4">
+          <div dnd-droppable class="cont dropable-container" (onDropSuccess)="dropedSecond($event)">
+              <div class="dropable-body">
+                  <h3 [hidden]="secondIsDropped" class="drop-text">Drag and drop</h3>
+                    <div *ngIf="secondIsDropped">
+                        <div class="model-container-dropped">
+                            <div class="model-title">
+                                <h3>{{secondData.dragData.name}} 
+                                  <i class="fa fa-times" aria-hidden="true" (click)="deleteSecondData()"></i>
+                                </h3>
+                            </div>
+                            <div class="model-image-dropped">
+                                <img src="{{secondData.dragData.image}}" alt="">
+                            </div>
+                          </div>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </div>    
+  </div>
