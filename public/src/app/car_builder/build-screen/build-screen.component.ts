@@ -60,10 +60,11 @@ export class BuildScreenComponent implements OnInit {
     this.bsModalRef = this.modalService.show(PreviewModalComponent);
   }
 
-  setColor(colorID) {
+  setColor(color) {
+    let data ={ID: color.ID, name: color.name};
     this.specs = {
       ...this.specs,
-      color: colorID
+      color: data
     }
     this.selectedCarSrv.changeSpecs(this.specs);
   }
@@ -71,8 +72,7 @@ export class BuildScreenComponent implements OnInit {
   setRims(rims) {
     this.specs = {
       ...this.specs,
-      rims: rims.description,
-      rimsID: rims.id //agregue esto.. hay que cambiar
+      rims: rims,
     }
     this.selectedCarSrv.changeSpecs(this.specs);
   }

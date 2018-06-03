@@ -54,18 +54,23 @@ export class CarComponent implements OnInit {
   }
 
   private updateCar(specs) {
-    this.bodyImg = this.getBackground(specs.name, 0);
-    this.bodyImageStyle.backgroundImage = 'url(' + this.bodyImg + ')';
-    this.extraImg = this.getBackground(specs.name, 1);
-    this.changeCarColor(specs.color);
-    this.color = specs.color;
-    this.changeRimsImage(specs.modelID, specs.rimsID);
+    if(!(typeof specs.color === "undefined")){ // Este if se puede quitar cuando ya salga el builder solo cuando se selecciona Customize your own
+
+      this.bodyImg = this.getBackground(specs.name, 0);
+      this.bodyImageStyle.backgroundImage = 'url(' + this.bodyImg + ')';
+      this.extraImg = this.getBackground(specs.name, 1);
+      this.changeCarColor(specs.color.name);
+      this.color = specs.color.name;
+      this.changeRimsImage(specs.rims);
+
+    }
+    
   }
 
-  changeRimsImage(modelID, rimsID) {
+  changeRimsImage(selectedRims) {
     if (this.rims) {
       for (let rim of this.rims) {
-        if (rim.modelId == modelID && rim.rimId == rimsID) {
+        if (rim.modelId == selectedRims.modelId && rim.rimId == selectedRims.rimId) {
           this.rimsImg = rim.path;
           return;
         }

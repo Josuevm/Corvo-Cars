@@ -2,11 +2,11 @@
  
     <div *ngFor="let rim of rims" 
       (click)="onRimChange(rim)"
-      [class.active]="selectedRimID == rim.id"
+      [class.active]="selectedRim.rimId == rim.ID"
       class="col-md-2 Rim">
       <img src="{{rim.img}}" class="rimsIcon">
      
     </div>
 
-    <div id="description">{{description}}</div>
+    <div id="description">{{selectedRim.name}}</div>
 </div>

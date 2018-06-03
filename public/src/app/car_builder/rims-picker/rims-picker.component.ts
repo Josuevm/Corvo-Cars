@@ -15,12 +15,13 @@ export class RimsPickerComponent implements OnInit {
   selectedRimID: string;
   description: string;
   rimsImages: any;
+  selectedRim ={rimId:"", name:"", price:"", img:""}
 
   //must Load images in this array
   rims = [
-    { id: '0', img: 'rims1', description: '' },
-    { id: '1', img: 'rims2', description: '' },
-    { id: '2', img: 'rims3', description: '' },
+    { ID: '0', img: 'rims1', name: '' , price : ""},
+    { ID: '1', img: 'rims2', name: '' , price : ""},
+    { ID: '2', img: 'rims3', name: '' , price : ""},
   ];
 
   constructor(private carData: CarDataService, private carService: SelectedCarService) {}
@@ -32,21 +33,22 @@ export class RimsPickerComponent implements OnInit {
       for (let dat of data) {
           if(dat.description != undefined){
             this.rims[dat.rimId].img = dat.path;
-            this.rims[dat.rimId].description = dat.description;
+            this.rims[dat.rimId].name = dat.description;
+            this.rims[dat.rimId].price = dat.price;
           }
        }
     });
     //Need to update selected Rims to be sinchronized with the selected car when model change
     this.carService.specs.subscribe(specs => {
-      this.selectedRimID = specs.rimsID;
-      this.description = specs.rims;
+      this.selectedRim = specs.rims;
     });
   }
 
   onRimChange(rims) {
-    this.selectedRimID = rims.id;
-    this.description = rims.description
-    this.rimsChanged.emit(rims);//send the rimID to the build screen
+    this.selectedRim.name = this.rims[rims.ID].name;
+    this.selectedRim.rimId = rims.ID;
+    this.selectedRim.price = this.rims[rims.ID].price;
+    this.rimsChanged.emit(this.selectedRim);
   }
 
 }

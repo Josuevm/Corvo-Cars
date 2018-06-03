@@ -4,8 +4,8 @@
       <div *ngFor="let color of colors"
             class="col-xs-1 col-sm-2 circle" 
             [style.background]='color.hexcode'
-            (click)="onColorChange(color.id)"
-            [class.active]="color.id === selectedColor"
+            (click)="onColorChange(color)"
+            [class.active]="color.name === selectedColor.name"
            >
       </div>
     </div>

@@ -5,10 +5,25 @@ var CarModelsSchema = new mongoose.Schema({
     description : String,
     image: String,
     features: [],
-    color: String,
-    rims: String,
-    inside: String,
-    motor: String,
+    color: {
+        ID:String,
+        name: String,
+    },
+    rims: {
+        ID:String,
+        name: String,
+        price: String
+    },
+    inside: {
+        ID:String,
+        name: String,
+        price: String
+    },
+    motor: {
+        ID:String,
+        name: String,
+        price: String
+    },
     extras : []
 });
 
