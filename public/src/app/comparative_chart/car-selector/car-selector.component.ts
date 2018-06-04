@@ -8,68 +8,101 @@ import { CarDataService } from '../../car-data.service';
 })
 export class CarSelectorComponent implements OnInit {
 
-  models:any;
+  models: any;
   firstIsDropped: Boolean = false;
   secondIsDropped: Boolean = false;
-  firstData : any;
-  secondData :any;
-  firstCarName = "";
-  secondCarName= " "
-  cars={};
+  firstData: any;
+  secondData: any;
+  firstCarName = null;
+  secondCarName = null;
+  cars = {};
 
   constructor(private carData: CarDataService, private el: ElementRef) { }
 
   ngOnInit() {
-    this.carData.getModels().subscribe(res =>{
+    this.carData.getModels().subscribe(res => {
       this.models = res
     });
   }
 
-  ngAfterViewChecked(){
+  ngAfterViewChecked() {
     this.matchHeight();
   }
 
-  @HostListener('window:resize') 
-    onResize() {
-      console.log("Resize-...........")
-        this.matchHeight();
-    }
+  @HostListener('window:resize')
+  onResize() {
+    console.log("Resize-...........")
+    this.matchHeight();
+  }
 
-  areComparable(){ //Checks if there are 2 options selected. If is the case emits an object with both car names
-    if(this.firstData && this.secondData){
-      this.cars = {
-        option1: this.firstData.dragData.name,
-        option2: this.secondData.dragData.name
-      }
+  areComparable() { //Checks if there are 2 options selected. If is the case emits an object with both car names
+    this.cars = {
+      option1: this.firstCarName,
+      option2: this.secondCarName
     }
   }
 
-  dropedFirst($event:any){ 
-    this.firstIsDropped=true;
+  dropedFirst($event: any) {
     this.firstData = $event;
-    this.firstCarName = this.firstData.dragData.name;
-    this.areComparable();
+    if (this.firstData.dragData) {
+      this.firstIsDropped = true;
+      this.firstCarName = this.firstData.dragData.name;
+      this.areComparable();
+    }
   }
 
-  dropedSecond($event){
-    this.secondIsDropped=true;
+  dropedSecond($event) {
     this.secondData = $event;
-    this.secondCarName = this.secondData.dragData.name;
-    this.areComparable();
+    if (this.secondData.dragData) {
+      this.secondIsDropped = true;
+      this.secondCarName = this.secondData.dragData.name;
+      this.areComparable();
+    }
   }
 
-  deleteFirstData(){
+  deleteFirstData() {
     this.firstIsDropped = false;
     this.firstData = null;
-    this.firstCarName = "";
-    this.cars = {};
+    this.firstCarName = null;
+    this.areComparable();
   }
 
-  deleteSecondData(){
+  deleteSecondData() {
     this.secondIsDropped = false;
     this.secondData = null;
-    this.secondCarName = "";
-    this.cars = {};
+    this.secondCarName = null;
+    this.areComparable();
+  }
+
+  isDraggable(name) {
+    if (name == this.firstCarName || name == this.secondCarName) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  validateDrop(dropZone) {
+    let show = false;
+    switch (dropZone) {
+      case "1":
+        if (this.firstIsDropped && this.firstData) {
+          console.log("Si entra en el 1")
+          show = true
+        } else {
+          show = false;
+        }
+        break;
+      case "2":
+        if (this.secondIsDropped && this.secondData) {
+          console.log("Si entra en el 2")
+          show = true
+        } else {
+          show = false;
+        }
+        break;
+    }
+    return show;
   }
 
   matchHeight() {
@@ -82,14 +115,14 @@ export class CarSelectorComponent implements OnInit {
     });
 
     const itemHeights = Array.from(children)
-        .map(x => x.getBoundingClientRect().height);
+      .map(x => x.getBoundingClientRect().height);
 
     const maxHeight = itemHeights.reduce((prev, curr) => {
-        return curr > prev ? curr : prev;
+      return curr > prev ? curr : prev;
     }, 0);
 
     Array.from(children)
-        .forEach((x: HTMLElement) => x.style.height = `${maxHeight}px`);
-}
+      .forEach((x: HTMLElement) => x.style.height = `${maxHeight}px`);
+  }
 
 }

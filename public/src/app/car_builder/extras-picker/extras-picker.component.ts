@@ -29,20 +29,20 @@ export class ExtrasPickerComponent implements OnInit {
     this.carData.getExtras().subscribe(res => {
       this.data = res;
     });
-    this.selectedCarSrv.specs.subscribe(res => { this.specs = res });
+    this.selectedCarSrv.specs.subscribe(res => { 
+      this.specs = res;
+      this.extras = res.extras;
+    });
   }
 
   isActive(extra){
-    console.log(this.extras);
-    console.log(extra.name);
-    let aux = this.extras.indexOf(extra.name);
-    if(aux !== -1){
-
-      return true;
-    }else{
- 
-      return false;
+    let isSelected;
+    for (let ext of this.extras) {
+      if(extra.name == ext.name){
+        isSelected = true;
+      }
     }
+    return isSelected;
   }
 
   addExtra(extra,id) {  
@@ -50,7 +50,8 @@ export class ExtrasPickerComponent implements OnInit {
     if(aux !== -1){
       this.extras.splice(aux, 1);
     }else{
-      this.extras.push(extra.name);
+      let data= {name: extra.name, price: extra.price}
+      this.extras.push(data);
     }
     this.specs = {
       ...this.specs,

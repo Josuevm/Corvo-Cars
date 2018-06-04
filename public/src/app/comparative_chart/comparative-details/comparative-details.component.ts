@@ -23,9 +23,17 @@ export class ComparativeDetailsComponent implements OnInit {
   }
 
   getComparedCarsDetails(){
-    if(this.cars){
+    console.log("Cars:",this.cars);
+    if(this.cars.option1){
       this.carData.getModel(this.cars.option1).subscribe(res=> this.car1 = res );
+    }else{
+      this.car1 = null;
+    }
+
+    if(this.cars.option2){
       this.carData.getModel(this.cars.option2).subscribe(res=> this.car2 = res);
+    }else{
+      this.car2 = null;
     }
   }
 

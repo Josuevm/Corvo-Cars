@@ -25,6 +25,7 @@ export class SelectedCarService {
   constructor(private http: HttpClient) { }
 
   changeSpecs(specs) {
+    console.log(specs)
     this.carSpecs.next(specs);
     this.specsChanged.emit(specs);
   }

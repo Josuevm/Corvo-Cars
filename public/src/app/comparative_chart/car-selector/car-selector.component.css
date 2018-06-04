@@ -16,6 +16,7 @@ h1,h2,h3,h4,h5{
 .model-image>img{
     max-height:100%; 
     max-width:100%;
+    cursor: move;
 }
 
 .dropable-container{
@@ -50,6 +51,6 @@ h1,h2,h3,h4,h5{
     cursor:pointer;
 }
 
-.dragged{
-    visibility: hidden;
+.model-container.dragged{
+    cursor: not-allowed;
 }
