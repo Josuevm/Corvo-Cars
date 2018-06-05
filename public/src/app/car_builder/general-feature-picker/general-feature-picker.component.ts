@@ -39,16 +39,16 @@ export class GeneralFeaturePickerComponent implements OnInit {
   changeDataType() {
     switch (this.type) {
       case 'interiors':
-        this.carData.getInteriors().subscribe(res => { 
-          this.data = res;
+        //this.carData.getInteriors().subscribe(res => { 
+          this.data = this.carData.getInteriors();
           this.selectedCardFeature = this.specs.inside;
-        });
+        //});
         break;
       case 'motors':
-        this.carData.getMotors().subscribe(res => { 
-          this.data = res;
+        //this.carData.getMotors().subscribe(res => { 
+          this.data = this.carData.getMotors();
           this.selectedCardFeature = this.specs.motor;
-        });
+        //});
         break;
     }
 

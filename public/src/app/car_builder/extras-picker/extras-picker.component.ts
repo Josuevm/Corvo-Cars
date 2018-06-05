@@ -26,9 +26,9 @@ export class ExtrasPickerComponent implements OnInit {
     private selectedCarSrv: SelectedCarService) { }
 
   ngOnInit() {
-    this.carData.getExtras().subscribe(res => {
-      this.data = res;
-    });
+    //this.carData.getExtras().subscribe(res => {
+      this.data = this.carData.getExtras();
+    //});
     this.selectedCarSrv.specs.subscribe(res => { 
       this.specs = res;
       this.extras = res.extras;

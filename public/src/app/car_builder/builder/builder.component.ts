@@ -9,7 +9,6 @@ export class BuilderComponent implements OnInit {
 
   constructor() { }
 
-  @Input('modelID') selectedModelID: Number;
   selectedOption: String;
   is4x4: false;
 

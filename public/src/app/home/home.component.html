@@ -3,7 +3,17 @@
     <span class="helper"></span>
     <app-header></app-header>
 </div>
-<app-models (modelIDChanged)='onModelIDChanged($event)'></app-models>
-<car-builder [modelID]='selectedModelID' ></car-builder>
+<app-models (modelChanged)='onModelChanged($event)'></app-models>
+<div [ngSwitch]="section">
+    <div *ngSwitchCase="'builder'">
+        <car-builder ></car-builder>
+    </div>
+    <div *ngSwitchCase="'details'">
+        <app-model-info [model]="selectedModelName" (customize)="onCustomize()"></app-model-info>
+    </div>
+    <div *ngSwitchDefault>
+        <app-model-info [model]="selectedModelName" (customize)="onCustomize()"></app-model-info>
+    </div>
+</div>
 
 
