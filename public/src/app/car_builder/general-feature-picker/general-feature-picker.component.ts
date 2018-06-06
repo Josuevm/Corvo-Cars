@@ -28,7 +28,10 @@ export class GeneralFeaturePickerComponent implements OnInit {
     private selectedCarSrv: SelectedCarService) { }
 
   ngOnInit() {
-    this.selectedCarSrv.specs.subscribe(res => {this.specs = res});
+    this.selectedCarSrv.specs.subscribe(res => {
+      this.specs = res;
+      this.changeDataType();
+    });
     this.selectedCarSrv.specsChanged.subscribe((res) => this.changeDataType());
   }
 
@@ -48,6 +51,7 @@ export class GeneralFeaturePickerComponent implements OnInit {
         //this.carData.getMotors().subscribe(res => { 
           this.data = this.carData.getMotors();
           this.selectedCardFeature = this.specs.motor;
+          console.log("......", this.specs.motor)
         //});
         break;
     }
