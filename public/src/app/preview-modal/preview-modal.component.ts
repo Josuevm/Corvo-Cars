@@ -11,14 +11,7 @@ export class PreviewModalComponent implements OnInit {
 
   bsModalRef: BsModalRef;
 
-  specs = {
-    color: "",
-    extras: [],
-    inside: "",
-    name: "",
-    rims: "",
-    motor: ""
-  };
+  specs : any;
 
   details =[]
 
@@ -36,25 +29,33 @@ export class PreviewModalComponent implements OnInit {
     this.details =[
       {
         name: 'Inside',
-        desc: this.specs.inside,
+        desc: this.specs.inside.name,
         icon: 'drive_eta'
       },
       {
         name: 'Rims',
-        desc: this.specs.rims,
+        desc: this.specs.rims.name,
         icon: 'brightness_high'
       },
       {
         name: 'Motor',
-        desc: this.specs.motor,
+        desc: this.specs.motor.name,
         icon: 'build'
       },
       {
         name: 'Extras',
-        desc: this.specs.extras,
+        desc: this.getExtras(),
         icon: 'playlist_add'
       },
     ]
+  }
+
+  getExtras(){
+    let extras = [];
+    for(let extra of this.specs.extras){
+      extras.push(extra.name)
+    }
+    return extras;
   }
 
   hideModal(){ //not working

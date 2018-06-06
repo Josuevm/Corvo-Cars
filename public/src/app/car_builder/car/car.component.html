@@ -1,0 +1,16 @@
+<div class="car">
+
+  <div class="baseImage" [ngStyle]="{backgroundImage:'url(' + bodyImg + ')'
+  ,backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: '90%'}"></div>
+
+  <div class="bodyImage" id="bodyImage" [ngStyle]="bodyImageStyle"></div>
+
+  <!-- Luces, Vidrio, Llantas-->
+  <div class="extraImage" id="extraImage" [ngStyle]="{backgroundImage:'url(' + extraImg + ')'
+  ,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize: '90%'}">
+  </div>
+
+  <!-- Aros -->
+  <div class="rimsImage" id="rimsImage"[ngStyle]="{backgroundImage:'url(' + rimsImg + ')'
+  ,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize: '90%'}">
+  </div>

@@ -1,0 +1,83 @@
+.car {
+    align-content: center;
+}
+
+.baseImage{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+}
+
+.bodyImage{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
+}
+
+.extraImage{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+}
+
+.rimsImage{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  background-size: 100%;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 18%;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .bodyImage{
+      -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+
+    .baseImage{
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+    
+    .extraImage{
+
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+    
+    .rimsImage{
+
+      position: absolute;
+      background-size: 100%;
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5%;
+    }
+  
+}

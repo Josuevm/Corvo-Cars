@@ -1,21 +1,6 @@
 <div class="row buildScreen">
 
-    <div class="car">
-        <div class="bodyImage" id="bodyImage" [ngStyle]="{backgroundImage:'url(' + getBackground(0) + ')'
-        ,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize: '90%'}">
-            
-        </div>
-
-        <!-- Luces, Vidrio, Llantas-->
-        <div class="extraImage" id="extraImage" [ngStyle]="{backgroundImage:'url(' + getBackground(1) + ')'
-        ,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize: '90%'}">
-        </div>
-
-        <!-- Aros -->
-        <div class="rimsImage" id="rimsImage"[ngStyle]="{backgroundImage:'url(' + rimPath + ')'
-        ,backgroundRepeat:'no-repeat',backgroundPosition: 'center center',backgroundSize: '90%'}">
-        </div>
-    </div>
+    <car></car>
 
     <div [ngSwitch]="buildOption">
 
@@ -25,7 +10,6 @@
 
         <div *ngSwitchCase="'motor'">
             <app-general-feature-picker [type]="'motors'"></app-general-feature-picker>
-            <h1>Motor</h1>
         </div>
 
         <div *ngSwitchCase="'extras'">

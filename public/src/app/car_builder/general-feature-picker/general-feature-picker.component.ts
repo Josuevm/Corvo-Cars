@@ -18,11 +18,11 @@ export class GeneralFeaturePickerComponent implements OnInit {
     rims: "",
     motor: ""
   };
-  selectedCardName: string = "";
+  selectedCardFeature: any;
   selectedCardID: Number = 0;
 
   @Input('type')
-  type: String = ""
+  type: String = "";
 
   constructor(private carData: CarDataService,
     private selectedCarSrv: SelectedCarService) { }
@@ -41,20 +41,27 @@ export class GeneralFeaturePickerComponent implements OnInit {
       case 'interiors':
         this.carData.getInteriors().subscribe(res => { 
           this.data = res;
-          this.selectedCardName = this.specs.inside;
+          this.selectedCardFeature = this.specs.inside;
         });
         break;
       case 'motors':
         this.carData.getMotors().subscribe(res => { 
           this.data = res;
-          this.selectedCardName = this.specs.motor;
+          this.selectedCardFeature = this.specs.motor;
         });
         break;
     }
+
+    
   }
 
-  setSelectedCard(name) {
-    this.selectedCardName = name;
+  setSelectedCard(data) {
+    let info ={
+      ID:data.ID,
+      name: data.name,
+      price: data.price
+    }
+    this.selectedCardFeature = info;
     this.changeCarSpecs()
   }
 
@@ -63,13 +70,13 @@ export class GeneralFeaturePickerComponent implements OnInit {
       case 'interiors':
         this.specs = {
           ...this.specs,
-          inside: this.selectedCardName
+          inside: this.selectedCardFeature
         }
         break;
       case 'motors':
         this.specs = {
           ...this.specs,
-          motor: this.selectedCardName
+          motor: this.selectedCardFeature
         }
         break;
     }

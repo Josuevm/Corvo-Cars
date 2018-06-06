@@ -20,7 +20,7 @@ export class ModelsComponent implements OnInit {
 
   ngOnInit() {
       this.carData.getModels().subscribe(res =>{
-      this.models = res
+      this.models = res;
       this.selectedModelName = this.models[1].name;
     });
   }

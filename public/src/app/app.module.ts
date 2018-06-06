@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import {DndModule} from 'ng2-dnd';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
 
@@ -25,7 +26,11 @@ import { SelectedCarService } from './selected-car.service';
 import { GeneralFeaturePickerComponent } from './car_builder/general-feature-picker/general-feature-picker.component';
 import { RimsPickerComponent } from './car_builder/rims-picker/rims-picker.component';
 import { PreviewModalComponent } from './preview-modal/preview-modal.component';
-import { ExtrasPickerComponent } from './car_builder/extras-picker/extras-picker.component'
+import { ExtrasPickerComponent } from './car_builder/extras-picker/extras-picker.component';
+import { CarComponent } from './car_builder/car/car.component'
+import { CarSelectorComponent } from './comparative_chart/car-selector/car-selector.component';
+import { ComparativeViewComponent } from './comparative_chart/comparative-view/comparative-view.component';
+import { ComparativeDetailsComponent } from './comparative_chart/comparative-details/comparative-details.component'
 
 
 @NgModule({
@@ -44,7 +49,11 @@ import { ExtrasPickerComponent } from './car_builder/extras-picker/extras-picker
     GeneralFeaturePickerComponent,
     RimsPickerComponent,
     PreviewModalComponent,
-    ExtrasPickerComponent
+    ExtrasPickerComponent,
+    CarComponent,
+    CarSelectorComponent,
+    ComparativeViewComponent,
+    ComparativeDetailsComponent
 
   ],
   imports: [
@@ -56,7 +65,8 @@ import { ExtrasPickerComponent } from './car_builder/extras-picker/extras-picker
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBt-_YitTA4qlfeIkQbaqZOXNiERL6USuA'
     }),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    DndModule.forRoot()
   ],
   providers: [
     CarDataService,
