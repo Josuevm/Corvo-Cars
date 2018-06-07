@@ -49,7 +49,7 @@ export class BuildScreenComponent implements OnInit {
   }
 
   showPreview() {
-    this.bsModalRef = this.modalService.show(PreviewModalComponent);
+    this.bsModalRef = this.modalService.show(PreviewModalComponent,{class: 'modal-preview'});
   }
 
   setColor(color) {

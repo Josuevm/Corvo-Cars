@@ -1,11 +1,12 @@
-import { Component, OnInit, Output, ViewChild} from '@angular/core';
+import { Component, OnInit, Output, ViewChild,ViewEncapsulation} from '@angular/core';
 import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 import { SelectedCarService } from '../selected-car.service'
 
 @Component({
   selector: 'app-preview-modal',
   templateUrl: './preview-modal.component.html',
-  styleUrls: ['./preview-modal.component.css']
+  styleUrls: ['./preview-modal.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PreviewModalComponent implements OnInit {
 

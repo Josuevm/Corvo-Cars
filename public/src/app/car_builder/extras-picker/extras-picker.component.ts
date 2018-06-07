@@ -43,15 +43,17 @@ export class ExtrasPickerComponent implements OnInit {
       }
     }
     return isSelected;
+    
   }
 
-  addExtra(extra,id) {  
-    let aux = this.extras.indexOf(extra.name);
+  addExtra(extra) {  
+  
+    let aux = this.extras.indexOf(extra);
+    console.log(extra);
     if(aux !== -1){
       this.extras.splice(aux, 1);
     }else{
-      let data= {name: extra.name, price: extra.price}
-      this.extras.push(data);
+      this.extras.push(extra);
     }
     this.specs = {
       ...this.specs,
