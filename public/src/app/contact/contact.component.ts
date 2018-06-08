@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient, HttpParams } from '@angular/common/http';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
   showMessage : boolean = false;
   alert :String = "";
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.changeNavStyle();
@@ -27,8 +27,12 @@ export class ContactComponent implements OnInit {
     if(this.message.name.length !== 0 ||
       this.message.email.length !== 0 ||
       this.message.body.length !== 0){
-      this.alert = "Thank you for contacting us!"
-      this.showMessage = true;
+
+        
+        this.alert = "Thank you for contacting us!"
+        this.http.post('/contact_email/',this.message).subscribe(res=>{});
+        this.showMessage = true;
+
     }else{
       this.alert = "You need to fill all the information";
       this.showMessage = true;
