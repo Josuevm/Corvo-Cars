@@ -19,12 +19,6 @@ import { ColorPickerComponent } from '../color-picker/color-picker.component';
 export class BuildScreenComponent implements OnInit {
 
   @Input('buildOption') buildOption;
-  @Input('model') model;
-
-  car = {
-    modelID: 0,
-    colorID: ''
-  };
 
   specs: any;
 
@@ -40,7 +34,6 @@ export class BuildScreenComponent implements OnInit {
     this.selectedCarSrv.specs.subscribe(res => this.specs = res);
     this.specs = { //cambiar estp
       ...this.specs,
-      modelID: this.model,
       rimsID: 1
     }
     this.selectedCarSrv.changeSpecs(this.specs);
@@ -48,16 +41,15 @@ export class BuildScreenComponent implements OnInit {
 
   ngOnChanges() {
     //cambia el id, de una vez en cadena se cambia lo grafico
-    this.car.modelID = this.model;
-    this.specs = { //cambiar esto
-      ...this.specs,
-      modelID: this.model
-    }
-    this.selectedCarSrv.changeSpecs(this.specs);
+    // this.specs = { //cambiar esto
+    //   ...this.specs,
+    //   modelID: this.model
+    // }
+    // this.selectedCarSrv.changeSpecs(this.specs);
   }
 
   showPreview() {
-    this.bsModalRef = this.modalService.show(PreviewModalComponent);
+    this.bsModalRef = this.modalService.show(PreviewModalComponent,{class: 'modal-preview'});
   }
 
   setColor(color) {

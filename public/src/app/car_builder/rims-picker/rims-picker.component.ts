@@ -28,8 +28,8 @@ export class RimsPickerComponent implements OnInit {
 
   ngOnInit() {
     //load images on rims array from carImages
-    this.carData.getRims().subscribe(res => {
-      let data: any = res;
+    // this.carData.loadRims().subscribe(res => {
+      let data: any = this.carData.getRims();
       for (let dat of data) {
           if(dat.description != undefined){
             this.rims[dat.rimId].img = dat.path;
@@ -37,7 +37,7 @@ export class RimsPickerComponent implements OnInit {
             this.rims[dat.rimId].price = dat.price;
           }
        }
-    });
+    // });
     //Need to update selected Rims to be sinchronized with the selected car when model change
     this.carService.specs.subscribe(specs => {
       this.selectedRim = specs.rims;
