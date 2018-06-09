@@ -10,7 +10,7 @@ import { SelectedCarService } from '../selected-car.service';
 })
 export class ModelsComponent implements OnInit {
 
-  @Output('modelIDChanged') modelIDChanged = new EventEmitter();
+  @Output('modelChanged') modelChanged = new EventEmitter();
   models: any;
   selectedModel: Number = 2;
   selectedModelName: String = "";
@@ -22,13 +22,14 @@ export class ModelsComponent implements OnInit {
       this.carData.getModels().subscribe(res =>{
       this.models = res;
       this.selectedModelName = this.models[1].name;
+      this.modelChanged.emit(this.selectedModelName);
     });
   }
 
   setSelectedModel(index){
     this.selectedModel = index;
     this.selectedModelName = this.models[index].name;
-    this.modelIDChanged.emit(index);
+    this.modelChanged.emit(this.selectedModelName);
     this.selectedCarSrv.getDefaultData(this.selectedModelName);
     // this.selectedCarSrv.specs.subscribe(res => this.specs = res);
     // this.selectedCarSrv.changeSpecs(this.specs);

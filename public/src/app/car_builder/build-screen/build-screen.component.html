@@ -1,33 +1,40 @@
 <div class="row buildScreen">
 
-    <car></car>
-
-    <div [ngSwitch]="buildOption">
-
-        <div *ngSwitchCase="'color'">
-            <color-picker (colorChanged)="setColor($event)"></color-picker>
+    <div class="row">
+        <div class='box foo col-sm-4 col-md-offset-4 col-sm-offset-4' (click)="showPreview()">
+            PREVIEW
         </div>
+        <car></car>
 
-        <div *ngSwitchCase="'motor'">
-            <app-general-feature-picker [type]="'motors'"></app-general-feature-picker>
-        </div>
-
-        <div *ngSwitchCase="'extras'">
-           <extras-picker></extras-picker>
-        </div>
-
-        <div *ngSwitchCase="'inside'">
-            <app-general-feature-picker [type]="'interiors'"></app-general-feature-picker>
-        </div>
-
-        <div *ngSwitchCase="'rims'">
-            <rims-picker (rimsChanged)="setRims($event)"></rims-picker>
-        </div>
-
-        <div *ngSwitchDefault>
-            <color-picker (colorChanged)="setColor($event)"></color-picker>
-        </div>
     </div>
 
-    <div class='box foo button' (click)="showPreview()">Preview</div>
+    <div class="row">
+        <div [ngSwitch]="buildOption">
+
+            <div *ngSwitchCase="'color'">
+                <color-picker (colorChanged)="setColor($event)"></color-picker>
+            </div>
+
+            <div *ngSwitchCase="'motor'">
+                <app-general-feature-picker [type]="'motors'"></app-general-feature-picker>
+            </div>
+
+            <div *ngSwitchCase="'extras'">
+                <extras-picker></extras-picker>
+            </div>
+
+            <div *ngSwitchCase="'inside'">
+                <app-general-feature-picker [type]="'interiors'"></app-general-feature-picker>
+            </div>
+
+            <div *ngSwitchCase="'rims'">
+                <rims-picker (rimsChanged)="setRims($event)"></rims-picker>
+            </div>
+
+            <div *ngSwitchDefault>
+                <color-picker (colorChanged)="setColor($event)"></color-picker>
+            </div>
+        </div>
+
+    </div>
 </div>

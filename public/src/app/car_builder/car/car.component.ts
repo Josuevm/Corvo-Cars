@@ -45,10 +45,11 @@ export class CarComponent implements OnInit {
   constructor(public carService: SelectedCarService, public carData: CarDataService) {  }
 
   ngOnInit() {
-    this.carData.getRims().subscribe(res => {
-      this.rims = res;
-    });
+    this.rims = this.carData.getRims();
     this.carService.specs.subscribe(specs => {
+      if(!this.rims) { // Este bloque se puede quitar cuando ya salga el builder cuando se selecciona Customize your own
+        this.rims = this.carData.getRims();
+      }
       this.updateCar(specs);
     });
   }
@@ -68,7 +69,7 @@ export class CarComponent implements OnInit {
   }
 
   changeRimsImage(selectedRims) {
-    if (this.rims) {
+    if (this.rims) { // Este if se puede quitar cuando ya salga el builder solo cuando se selecciona Customize your own
       for (let rim of this.rims) {
         if (rim.modelId == selectedRims.modelId && rim.rimId == selectedRims.rimId) {
           this.rimsImg = rim.path;

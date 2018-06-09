@@ -12,7 +12,7 @@ export class SelectedCarService {
   @Output() specsChanged = new EventEmitter();
 
   car = {
-    modelID: 0,
+    modelID: 1,
     name: "",
     color: "",
     rims: "",
@@ -25,7 +25,6 @@ export class SelectedCarService {
   constructor(private http: HttpClient) { }
 
   changeSpecs(specs) {
-    console.log(specs)
     this.carSpecs.next(specs);
     this.specsChanged.emit(specs);
   }
