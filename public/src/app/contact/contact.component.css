@@ -234,3 +234,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram{
   .alert-message{
       cursor: pointer;
   }
+
+  .incorrect{
+      border: 2px solid rgba(203, 159, 61) !important;
+  }
