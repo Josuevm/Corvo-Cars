@@ -36,14 +36,14 @@ export class ExtrasPickerComponent implements OnInit {
   }
 
   isActive(extra){
-    let isSelected;
-    for (let ext of this.extras) {
-      if(extra.name == ext.name){
-        isSelected = true;
-      }
+    console.log(this.extras);
+    console.log(extra.name);
+    let aux = this.extras.indexOf(extra.name);
+    if(aux !== -1){
+      return true;
+    }else{
+      return false;
     }
-    return isSelected;
-    
   }
 
   addExtra(extra) {  
