@@ -1,17 +1,24 @@
 <div class="featureCard">
     <div class="container">
         <div class="row">
-      
+
             <div *ngFor="let dat of data; let i = index">
-        
-              <div class="col-sm-4 col-sm-offset-1" >
-                <div class="imageContainer" (click)='setSelectedCard(dat)' [class.active]="dat.name == selectedCardFeature.name">
-                    <img src="{{dat.path}}" class="featureImage">
-                    <div class="featureName">{{dat.name}}</div>
-                </div>  
-              </div>
+
+                <div class="col-sm-4 col-sm-offset-1">
+                    <div class="imageContainer" (click)='setSelectedCard(dat)' [class.active]="dat.name == selectedCardFeature.name">
+                        <img src="{{dat.path}}" class="featureImage">
+                        <div class="featureName">{{dat.name}}
+                        <div *ngIf="isMotor">
+                            <div><p class="yText">Cylinders </p><p class="wText">  {{dat.cylinders}}</p></div>
+                            <div><p class="yText">Horsepower </p><p class="wText">  {{dat.horsepower}}</p></div>
+                            <div><p class="yText">Acceleration </p><p class="wText">  {{dat.acceleration}}</p></div>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
             </div>
-       
+
         </div>
-      </div>
+    </div>
 </div>

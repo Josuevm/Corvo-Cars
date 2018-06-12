@@ -21,8 +21,13 @@
 }
 
 .featureImage:hover{
-    opacity: 0.3;
+    opacity: 0.2;
 }
+
+.imageContainer:hover .featureImage{
+    opacity: 0.2;
+}
+
 
 .imageContainer:hover .featureName{
     visibility: visible;
@@ -37,4 +42,18 @@
 
 .featureName{
     visibility: hidden
+}
+
+.wText{
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    font-size: 15px;
+    display:inline;
+}
+
+.yText{
+    font-family: 'Rajdhani', sans-serif;
+    color: rgb(203, 159, 61);
+    font-size: 20px;
+    display:inline
 }
