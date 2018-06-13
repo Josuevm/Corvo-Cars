@@ -1,14 +1,74 @@
 
-    <div class="col-sm-6">
+    <div class="col-sm-0">
       <div *ngIf="car1">
-        <p>{{car1.name}}</p>
-        <p>{{car1.inside}}</p>
+ 
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-0">
         <div *ngIf="car2">
-          <p>{{car2.name}}</p>
-          <p>{{car2.inside}}</p>
         </div>
       </div>
 
+
+<div id="generic_price_table">   
+<section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6  ">
+                  
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
+            <!--BLOCK ROW START-->
+            <div class="row">
+                <div class="col-md-2">
+                  
+                	<!--PRICE CONTENT START-->
+                    <div class="generic_content clearfix">
+                        <div class="generic_feature_list">
+                        	<ul>
+                              <li><span>Nombre:{{car1.name}}</span></li>
+                  
+                              <li><span><p>{{car1.inside.name}}</p></span></li>
+                             
+                                <li><span>{{car1.rims.name}}</span></li>
+                              
+                                <li><span>{{car1.motor.name}}</span></li>
+                                <li><span>{{car1.extras.name}}</span></li>
+                            </ul>
+                        </div>
+                   
+                        
+                    </div>
+                 
+                        
+                </div>
+                
+                
+                <div class="col-md-2">
+                
+                	<!--PRICE CONTENT START-->
+                    <div class="generic_content clearfix">
+                        <div class="generic_feature_list">
+                        	<ul>
+                              <li><span>{{car2.name}}</span></li>
+                            	<li><span>{{car2.inside.name}}</span> </li>
+                                <li><span>{{car2.rims.name}}</span> </li>
+                                <li><span>{{car2.motor.name}}</span></li>
+                                <li><span>{{car2.extras.name}}</span></li>
+                            
+                            </ul>
+                        </div>
+                     
+                    </div>
+                    <!--//PRICE CONTENT END-->
+                        
+                </div>
+            </div>	
+            <!--//BLOCK ROW END-->
+            
+        </div>
+    </section>             
+</div>
