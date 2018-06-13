@@ -93,3 +93,9 @@ a {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+
+  .snip1404 .plan-price {
+    font-weight: 600;
+    font-size: 3em;
+    color:#cb9f3d;
+  }
