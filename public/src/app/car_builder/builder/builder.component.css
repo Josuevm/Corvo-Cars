@@ -13,16 +13,20 @@
 }
 
 .optionsBar {
-    margin: 0px; 
-    height: 90vh;
-    width: 8vw;
-    box-shadow: 5px 0px 18px #222222;
+      /* margin: 0px; */
+      height: 90vh;
+      padding: 0;
+      width: 8vw;
+      -webkit-box-shadow: 5px 0px 18px #222222;
+      box-shadow: 5px 0px 18px #222222;
 }
 
 .active {
-    background: radial-gradient( rgba(255,255,255, 0.6), rgba(255,255,255, 0.5), rgba(255,255,255, 0));
+
+
+  background: linear-gradient(-45deg, rgba(255,255,255,.2) 60%, rgba(255,255,255,.05) 60%, rgba(255,255,255,.05) 80%, rgba(0,0,0,.1) 80%);
     border: 3px solid #cb9f3d;
-    color: #cb9f3d;
+    color:#cb9f3d !important;
 }
 
 .button {
@@ -32,22 +36,25 @@
   }
 
 .box {
-  margin: 1vh;
-  padding: 3vh;
-  height: 12vh;
-  width: 5vw;
+  margin-top: 1vh;
+  padding-top: 5vh;
+  height: 18%;
+  width: 100%;
+  /* font-size: 132%; */
   color: #FFF;
   text-align: center;
+  -ms-flex-line-pack: center;
   align-content: center;
   transition: 0.5s;
   cursor: pointer;
-  -webkit-transition:0.5s;
+  -webkit-transition: 0.5s;
 }
 
 .box:hover {
-  border: 2px solid rgba(0,160,80,0);
-  color: #FFF;
-  background: radial-gradient( rgba(255,255,255, 0.5), rgba(255,255,255, 0.2), rgba(255,255,255, 0));
+  border-radius: 10px;
+  border: solid 5px rgba(255,255,255,.1);
+  background: linear-gradient(-45deg, rgba(255,255,255,.2) 60%, rgba(255,255,255,.05) 60%, rgba(255,255,255,.05) 80%, rgba(0,0,0,.1) 80%);
+ 
 }
 
 .box::before, .box::after {
@@ -78,6 +85,7 @@
   transform-origin: 100% 0%;
 }
 
+
 .box:hover::after, .box:hover::before {
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -90,13 +98,32 @@
 
   .optionsBar {
     height: 12vh;
-    width: 90vw;
+    width: 100%;
+    -webkit-box-shadow: 5px 10px 18px #000000;
     box-shadow: 5px 10px 18px #000000;
   }
 
   .box {
-    height: 6vh;
-    width: 8vw;
+    height: 95%;
+    width: 20%;
+    margin-top: 0;
+    padding-top: 6%;
   }
 
+}
+
+.material-icons{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 3vw;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }

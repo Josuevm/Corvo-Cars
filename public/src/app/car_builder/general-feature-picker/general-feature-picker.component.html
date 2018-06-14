@@ -7,18 +7,39 @@
                 <div class="col-sm-4 col-sm-offset-1">
                     <div class="imageContainer" (click)='setSelectedCard(dat)' [class.active]="dat.name == selectedCardFeature.name">
                         <img src="{{dat.path}}" class="featureImage">
-                        <div class="featureName">{{dat.name}}
-                        <div *ngIf="isMotor">
-                            <div><p class="yText">Cylinders </p><p class="wText">  {{dat.cylinders}}</p></div>
-                            <div><p class="yText">Horsepower </p><p class="wText">  {{dat.horsepower}}</p></div>
-                            <div><p class="yText">Acceleration </p><p class="wText">  {{dat.acceleration}}</p></div>
-                        </div>
 
-                    </div>
-                    </div>
+
+
+                        <div class="overlay">
+
+
+                            <div class="featureName">{{dat.name}}
+                                <div *ngIf="isMotor">
+                                    <div>
+                                        <p class="yText">Cylinders </p>
+                                        <p class="wText"> {{dat.cylinders}}</p>
+                                    </div>
+                                    <div>
+                                        <p class="yText">Horsepower </p>
+                                        <p class="wText"> {{dat.horsepower}}</p>
+                                    </div>
+                                    <div>
+                                        <p class="yText">Acceleration </p>
+                                        <p class="wText"> {{dat.acceleration}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    
+
+
+
                 </div>
             </div>
-
         </div>
+
     </div>
+</div>
 </div>

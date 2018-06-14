@@ -133,7 +133,8 @@ a {
     vertical-align: middle;
     color: #FFF;
     display: inline-block;
-    
+    background: linear-gradient(-45deg, rgba(255,255,255,.2) 60%, rgba(255,255,255,.05) 60%, rgba(255,255,255,.05) 80%, rgba(0,0,0,.1) 80%);
+
     line-height: 60px;
     text-align: center;
     transition: 0.5s;
@@ -146,6 +147,7 @@ a {
   .box:hover {
     border: 2px solid rgba(0,160,80,0);
     color: #FFF;
+    
   }
   
   .box::before, .box::after {

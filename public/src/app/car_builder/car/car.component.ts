@@ -95,25 +95,25 @@ export class CarComponent implements OnInit {
   changeCarColor(color) {
     switch (color) {
       case 'black':
-        this.bodyImageStyle.filter = "opacity(.72) drop-shadow(0 0 0 black) saturate(100%) brightness(7.7%)";
+        this.bodyImageStyle.filter = "opacity(.72) drop-shadow(0 0 0 black) saturate(100%) brightness(54.0%)";
         break;
       case 'red':
-        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 red) saturate(550%) brightness(65%)";
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 red) saturate(330%) brightness(50%)";
         break;
       case 'white':
-        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 white) saturate(100%) brightness(1000%)";
+        this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 white) saturate(100%) brightness(160%)";
         break;
       case 'purple':
         this.bodyImageStyle.filter = "opacity(.7) drop-shadow(0 0 0 mediumpurple) saturate(700%) brightness(45%)";
         break;
       case 'blue':
-        this.bodyImageStyle.filter = "opacity(0.77) drop-shadow(darkblue 0px 0px 0px) saturate(2000%) brightness(38%)";
+        this.bodyImageStyle.filter = "opacity(0.77) drop-shadow(darkblue 0px 0px 0px) saturate(600%) brightness(70%)";
         break;
       case 'yellow':
         this.bodyImageStyle.filter = "opacity(.5) drop-shadow(0 0 0 gold) saturate(600%) brightness(135%)";
         break;
       case 'gray':
-        this.bodyImageStyle.filter = "opacity(.2) drop-shadow(0 0 0 black) saturate(100%) brightness(305%)";
+        this.bodyImageStyle.filter = "opacity(.2) drop-shadow(0 0 0 black) saturate(100%) brightness(550%)";
         break;
       case 'green':
         this.bodyImageStyle.filter = "opacity(0.77) drop-shadow(lime 0px 0px 0px) saturate(130%) brightness(188%)";
