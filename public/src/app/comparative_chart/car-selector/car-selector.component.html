@@ -3,10 +3,10 @@
     <div class="col-sm-12">
       <div *ngFor="let model of models; let i = index">
           <div class="col-sm-4" dnd-draggable [dragEnabled]="isDraggable(model.name)" 
-          [dragData]="{name: model.name, image:model.image}">
+          [dragData]="{name: model.name, image:model.image}"
+          [class.dragged]="model.name == firstCarName || model.name == secondCarName">
             <div class="cont model-container" 
-            dnd-draggable [dragEnabled]="isDraggable(model.name)"
-            [class.dragged]="model.name == firstCarName || model.name == secondCarName">
+            dnd-draggable [dragEnabled]="isDraggable(model.name)">
               <div class="model-title" 
               dnd-draggable [dragEnabled]="isDraggable(model.name)">
                   <h3 dnd-draggable [dragEnabled]="isDraggable(model.name)">{{model.name}}</h3>
