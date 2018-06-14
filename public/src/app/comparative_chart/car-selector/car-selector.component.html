@@ -21,8 +21,12 @@
       </div>
       </div>
       </div>
-      <div class="row top-buffer">
-      <div class="col-sm-4">
+    </div>
+      <div class="container-fluid">
+
+      
+      <div class="row top-buffer-m">
+      <div class="col-sm-3">
           <div dnd-droppable class="cont dropable-container" (onDropSuccess)="dropedFirst($event)" >
               <div class="dropable-body">
                 <h3 [hidden]="firstIsDropped" class="drop-text">Drag and drop</h3>
@@ -41,10 +45,10 @@
               </div>
           </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <app-comparative-details [cars]="cars"></app-comparative-details>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-3">
           <div dnd-droppable class="cont dropable-container" (onDropSuccess)="dropedSecond($event)">
               <div class="dropable-body">
                   <h3 [hidden]="secondIsDropped" class="drop-text">Drag and drop</h3>
@@ -63,5 +67,6 @@
                 </div>
           </div>
       </div>
-    </div>    
-  </div>
+    </div>  
+</div>  
+

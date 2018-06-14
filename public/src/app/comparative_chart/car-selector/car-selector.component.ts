@@ -87,7 +87,6 @@ export class CarSelectorComponent implements OnInit {
     switch (dropZone) {
       case "1":
         if (this.firstIsDropped && this.firstData) {
-          console.log("Si entra en el 1")
           show = true
         } else {
           show = false;
@@ -95,7 +94,6 @@ export class CarSelectorComponent implements OnInit {
         break;
       case "2":
         if (this.secondIsDropped && this.secondData) {
-          console.log("Si entra en el 2")
           show = true
         } else {
           show = false;
