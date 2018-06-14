@@ -95,7 +95,6 @@ export class ContactComponent implements OnInit {
   changeNavStyle(){
     document.getElementById("navbar").style.background = "#222";
     document.getElementById("navLink").style.color = "#fff";
-    document.getElementById("navLink1").style.color = "#fff";
     document.getElementById("navLink2").style.color = "#fff";
     document.getElementById("navLink3").style.color = "#fff";
   }
