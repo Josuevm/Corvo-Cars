@@ -7,6 +7,8 @@
     border: 2px solid rgb(255, 255, 255);
     height: 25vh;
     margin-top: 1vw;
+    cursor: pointer;
+    background: black;
 }
 
 .featureCard{
@@ -15,5 +17,43 @@
 }
 
 .active{
-    border: 2px solid rgb(203, 159, 61);
+    border: 4px solid rgb(203, 159, 61);
+}
+
+.featureImage:hover{
+    opacity: 0.2;
+}
+
+.imageContainer:hover .featureImage{
+    opacity: 0.2;
+}
+
+
+.imageContainer:hover .featureName{
+    visibility: visible;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2vw;
+}
+
+.featureName{
+    visibility: hidden
+}
+
+.wText{
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    font-size: 15px;
+    display:inline;
+}
+
+.yText{
+    font-family: 'Rajdhani', sans-serif;
+    color: rgb(203, 159, 61);
+    font-size: 20px;
+    display:inline
 }
