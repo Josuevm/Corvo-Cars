@@ -192,20 +192,27 @@ a {
     height: 5vw;
     perspective: 600;
     position: relative;
-    width: 15vw;
+    width: 5vw;
   }
 
   .card {
-   
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
     width: 100%;
   }
-  .card:hover {
+
+  .card-container:hover{
+    width: 15vw;
+  }
+  .card-container:hover .card {
     transform: rotateY(180deg);
   }
+  .card-container:hover .card .back {
+    visibility: visible;
+  }
+
   .card .side {
     backface-visibility: hidden;
     height: 100%;
@@ -213,6 +220,7 @@ a {
     width: 100%;
   }
   .card .back {
+    visibility: hidden;
     transform: rotateY(180deg);
     color: #cb9f3d;
   }

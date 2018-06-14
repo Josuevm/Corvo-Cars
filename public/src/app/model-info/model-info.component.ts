@@ -14,6 +14,7 @@ export class ModelInfoComponent implements OnInit {
   @Input('model')
   model: String;
 
+  modelName: String;
   constructor(private selectedCarSrv: SelectedCarService) { }
 
   ngOnInit() {
@@ -25,6 +26,8 @@ export class ModelInfoComponent implements OnInit {
   ngOnChanges(){
     if(this.model){
       this.selectedCarSrv.getFeatures(this.model).subscribe(res =>{ this.features = res});
+      let aux = this.model.split(" ");
+      this.modelName = aux[1];
     }
   }
 
