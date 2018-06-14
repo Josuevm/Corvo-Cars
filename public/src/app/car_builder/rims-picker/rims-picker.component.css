@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 2vh;
     left: 10vw;
-    height: 10vh;
+    height: 12vh;
     align-content: center;
     display: inline-flex;
     background: rgba(0, 0, 0, 0.5);
@@ -11,11 +11,16 @@
 
 .Rim{
     position: relative;
-    height: 7vh;
-    width: 5vw;
+    height: 10vh;
+    width: 10vw;
     margin-right: 5vw;
-    margin-top: 2vh;
+    margin-top: 1vh;
     cursor: pointer;
+}
+
+.rimsIcon {
+top:50%;
+left: 50%;
 }
 
 .active {

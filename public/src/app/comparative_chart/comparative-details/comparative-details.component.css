@@ -24,9 +24,11 @@
 }
 
 .list-item{
+	margin-bottom: 10px;
 	background-color: rgb(34, 34, 34);;
 }
 
 .list-item2{
+	margin-bottom: 10px;
 	background-color: rgb(70, 70, 70);
 }
