@@ -1,0 +1,32 @@
+.car1-list{
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.car2-list{
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.list-title{
+	text-align: center;
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.left-text{
+	float: left;
+	color: rgb(203, 159, 61);
+	font-size: 20px;
+}
+
+.right-text{
+	float: right;
+	color : white;
+	font-size: 17px;
+}
+
+.list-item{
+	background-color: rgb(34, 34, 34);;
+}
+
+.list-item2{
+	background-color: rgb(70, 70, 70);
+}

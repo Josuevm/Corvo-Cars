@@ -11,7 +11,7 @@ import { SelectedCarService } from '../selected-car.service'
 export class PreviewModalComponent implements OnInit {
 
   bsModalRef: BsModalRef;
-
+  subT = 0;
   specs : any;
 
   details =[]
@@ -20,32 +20,43 @@ export class PreviewModalComponent implements OnInit {
 
 
   ngOnInit() {
+    this.subT=0;
     this.selectedCarSrv.specs.subscribe(res => {
       this.specs = res;
       this.getDetails();
+      
     });
+    this.calculateTotal();
+
   }
 
   getDetails(){
+    
+ 
     this.details =[
       {
         name: 'Inside',
         desc: this.specs.inside.name,
+        price:this.specs.inside.price,
         icon: 'drive_eta'
+
       },
       {
         name: 'Rims',
         desc: this.specs.rims.name,
+        price:this.specs.rims.price,
         icon: 'brightness_high'
       },
       {
         name: 'Motor',
         desc: this.specs.motor.name,
+        price:this.specs.motor.price,
         icon: 'build'
       },
       {
         name: 'Extras',
         desc: this.getExtras(),
+        price:this.getExtraP1(),
         icon: 'playlist_add'
       },
     ]
@@ -55,11 +66,29 @@ export class PreviewModalComponent implements OnInit {
     let extras = [];
     for(let extra of this.specs.extras){
       extras.push(extra.name)
+
     }
     return extras;
   }
+getExtraP(){
+  for(let extra of this.specs.extras){
+    this.subT+=parseInt(extra.price);
+  }
+}
 
+getExtraP1(){
+  let subT = 0
+  for(let extra of this.specs.extras){
+    subT+=parseInt(extra.price);
+  }
+  return subT
+}
   hideModal(){ //not working
+   
+  }
+  calculateTotal(){ 
+    this.getExtraP()
+    this.subT+=parseInt(this.specs.motor.price) +parseInt(this.specs.inside.price)+parseInt(this.specs.rims.price);
     
   }
 

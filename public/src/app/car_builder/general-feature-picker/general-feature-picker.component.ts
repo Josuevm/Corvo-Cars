@@ -20,6 +20,7 @@ export class GeneralFeaturePickerComponent implements OnInit {
   };
   selectedCardFeature: any;
   selectedCardID: Number = 0;
+  isMotor = false;
 
   @Input('type')
   type: String = "";
@@ -51,6 +52,7 @@ export class GeneralFeaturePickerComponent implements OnInit {
         //this.carData.getMotors().subscribe(res => { 
           this.data = this.carData.getMotors();
           this.selectedCardFeature = this.specs.motor;
+          this.isMotor = true;
           console.log("......", this.specs.motor)
         //});
         break;

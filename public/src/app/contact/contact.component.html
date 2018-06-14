@@ -26,17 +26,20 @@
           <div class="form-group">
             <label for="contact-name">Name</label>
             <input type="text" name="name" placeholder="Enter your name..." 
-            class="contact-name" id="contact-name" [(ngModel)]="message.name">
+            class="contact-name" id="contact-name" [(ngModel)]="message.name"
+            [class.incorrect]="nameIsIncorrect">
           </div>
           <div class="form-group">
             <label for="contact-email">Email</label>
             <input type="text" name="email" placeholder="Enter your email..." 
-            class="contact-email" id="contact-email" [(ngModel)]="message.email">
+            class="contact-email" id="contact-email" [(ngModel)]="message.email"
+            [class.incorrect]="emailIsIncorrect">
           </div>
           <div class="form-group">
             <label for="contact-message">Message</label>
             <textarea name="message" placeholder="Your message..." 
-            class="contact-message" id="contact-message" [(ngModel)]="message.body"></textarea>
+            class="contact-message" id="contact-message" [(ngModel)]="message.body"
+            [class.incorrect]="messageIsIncorrect"></textarea>
           </div>
           <input type="submit" class="btn" (click)="sendMessage()" value="Send">
         </form>
@@ -57,9 +60,10 @@
           <h3>Social Media</h3>
          
           <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline"> 
-            <li><a href="https://www.facebook.com/Corvo-Cars-178109046180834" target="_blank"><i class="fa fa-facebook"></i></a> </li> 
-            <li><a href="https://twitter.com/Corvus_imperio" target="_blank"><i class="fa fa-twitter"></i></a> </li> 
-            <li><a href="https://www.instagram.com/corvo_cars/" target="_blank"><i class="fa fa-instagram"></i></a> </li>   
+            <li><a href="#"><i class="fa fa-facebook"></i></a> </li> 
+            <li><a href="#"><i class="fa fa-twitter"></i></a> </li>   
+            <li> <a href="#"><i class="fa fa-google-plus"></i></a> </li>
+            <li> <a href="#"><i class="fa fa-instagram"></i></a> </li> 
           </ul>
 
         </div>

@@ -33,11 +33,14 @@ a {
   cursor: pointer;
   border: 2px solid #FFF;
   -webkit-transition:0.5s;
+  background: linear-gradient(-45deg, rgba(255,255,255,.2) 60%, rgba(255,255,255,.05) 60%, rgba(255,255,255,.05) 80%, rgba(0,0,0,.1) 80%);
+
 }
 
 .box:hover {
   border: 2px solid rgba(0,160,80,0);
   color: #FFF;
+  
 }
 
 .box::before, .box::after {

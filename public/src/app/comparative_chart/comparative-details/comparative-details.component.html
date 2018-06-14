@@ -1,14 +1,77 @@
 
-    <div class="col-sm-6">
-      <div *ngIf="car1">
-        <p>{{car1.name}}</p>
-        <p>{{car1.inside}}</p>
-      </div>
-    </div>
-    <div class="col-sm-6">
-        <div *ngIf="car2">
-          <p>{{car2.name}}</p>
-          <p>{{car2.inside}}</p>
-        </div>
-      </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ">
 
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <!--BLOCK ROW START-->
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <div *ngIf="car1">
+                            <div class="list-title"> <h3>{{car1.name}}</h3> </div>
+                        <!--PRICE CONTENT START-->
+                        <div class="car1-list">
+                                <div class="list-item">
+                                    <p class="left-text">{{car1.inside.name}}</p>
+                                    <p class="right-text">${{car1.inside.price}}</p>
+                                    <div style="clear: both;"></div>
+                                </div>
+
+                                <div class="list-item2">
+                                    <p class="left-text">{{car1.rims.name}}</p>
+                                    <p class="right-text">${{car1.rims.price}}</p>
+                                    <div style="clear: both;"></div>
+                                </div>
+
+                                <div class="list-item">
+                                        <p class="left-text">{{car1.motor.name}}</p>
+                                        <p class="right-text">${{car1.motor.price}}</p>
+                                        <div style="clear: both;"></div>
+                                </div>
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3">
+                    <div *ngIf="car2">
+                            <div class="list-title"> <h3>{{car2.name}}</h3> </div>
+                        <!--PRICE CONTENT SdivRT-->
+                        <div class="car2-list">
+                                <div class="list-item">
+                                        <p class="left-text">{{car2.inside.name}}</p>
+                                        <p class="right-text">${{car2.inside.price}}</p>
+                                        <div style="clear: both;"></div>
+                                    </div>
+    
+                                    <div class="list-item2">
+                                        <p class="left-text">{{car2.rims.name}}</p>
+                                        <p class="right-text">${{car2.rims.price}}</p>
+                                        <div style="clear: both;"></div>
+                                    </div>
+    
+                                    <div class="list-item">
+                                            <p class="left-text">{{car2.motor.name}}</p>
+                                            <p class="right-text">${{car2.motor.price}}</p>
+                                            <div style="clear: both;"></div>
+                                    </div>
+
+                            
+                        </div>
+
+                    </div>
+                    <!--//PRICE CONTENT END-->
+
+                </div>
+            </div>
+            <!--//BLOCK ROW END-->
+
+        </div>
