@@ -41,3 +41,8 @@ td{
 	text-transform: uppercase;
 }
 
+.performance-star{
+	display: inline;
+	color: #cb9f3d;
+}
+

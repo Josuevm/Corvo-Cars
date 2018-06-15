@@ -98,7 +98,9 @@
         <tr class="table-row">
             <td class="left-col">
                 <div *ngIf="car1">
-                    <p>{{car1.motor.horsepower}}</p>
+                    <div *ngFor="let star of car1.stars" class="performance-star">
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
                 </div>
             </td>
             <td class="center-col">
@@ -106,7 +108,9 @@
             </td>
             <td class="right-col">
                 <div *ngIf="car2">
-                    <p>{{car2.motor.horsepower}}</p>
+                    <div *ngFor="let star of car2.stars" class="performance-star">
+                        <span class="glyphicon glyphicon-star performance-star"></span>
+                    </div>
                 </div>
             </td>
         </tr>
