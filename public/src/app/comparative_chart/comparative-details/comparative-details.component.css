@@ -1,34 +1,43 @@
-.car1-list{
-	font-family: 'Rajdhani', sans-serif;
-}
 
-.car2-list{
-	font-family: 'Rajdhani', sans-serif;
-}
 
-.list-title{
+th{
 	text-align: center;
+}
+
+tr{
+	background-color: rgb(34, 34, 34);
+	color:white;
 	font-family: 'Rajdhani', sans-serif;
 }
 
-.left-text{
-	float: left;
-	color: rgb(203, 159, 61);
-	font-size: 20px;
+td{
+	background-color:rgb(50, 50, 50);
+	font-size: 15px;
+	padding-bottom: 15px;
+    padding-top: 15px;
 }
 
-.right-text{
-	float: right;
-	color : white;
-	font-size: 17px;
+.left-col{
+	text-align: center;
 }
 
-.list-item{
-	margin-bottom: 10px;
-	background-color: rgb(34, 34, 34);;
-}
-
-.list-item2{
-	margin-bottom: 10px;
+.center-col{
+	text-align: center;
 	background-color: rgb(70, 70, 70);
+	color:#cb9f3d;
 }
+
+.right-col{
+	text-align: center;
+}
+
+.table-row{
+	margin-bottom: 20px;
+}
+
+.feature-table{
+	border-collapse: separate;
+	border-spacing: 0px 5px;
+	text-transform: uppercase;
+}
+
