@@ -6,7 +6,6 @@ var Rims_paths =  require('../models/Rims_paths.js');
 router.get('/',function (req,res,next){
     Rims_paths.find(function (err, rimsPaths) {
         if (err) return next(err);
-        console.log(rimsPaths);
         res.json(rimsPaths);
     });
 });

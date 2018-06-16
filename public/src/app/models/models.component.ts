@@ -12,7 +12,7 @@ export class ModelsComponent implements OnInit {
 
   @Output('modelChanged') modelChanged = new EventEmitter();
   models: any;
-  selectedModel: Number = 2;
+  selectedModel: Number = 1;
   selectedModelName: String = "";
   specs = {};
 
@@ -23,6 +23,7 @@ export class ModelsComponent implements OnInit {
       this.models = res;
       this.selectedModelName = this.models[1].name;
       this.modelChanged.emit(this.selectedModelName);
+      this.selectedCarSrv.getDefaultData(this.selectedModelName);
     });
   }
 
