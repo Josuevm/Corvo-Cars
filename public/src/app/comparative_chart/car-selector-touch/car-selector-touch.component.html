@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row top-buffer">
+    <div class="col-sm-12">
+      <div *ngFor="let model of models; let i = index">
+        <div class="col-sm-4">
+          <div class="cont model-container" (click)="selectCar(model)" [class.selected]="firstCarName == model.name || secondCarName == model.name">
+            <div class="model-title" >
+              <h3>{{model.name}}</h3>
+            </div>
+            <div class="model-image">
+              <img src="{{model.image}}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+
+
+  <div class="row top-buffer-m">
+      <div class="col-sm-3">
+          <div>
+              <div class="dropable-body">
+                  <div *ngIf="validateSelect('1')">
+                      <div class="model-container-dropped">
+                          <div class="model-title">
+                              <h3>{{firstData.name}} 
+                                  <i class="fa fa-times" aria-hidden="true" (click)="deleteFirstData()"></i>
+                                </h3>
+                          </div>
+                          <div class="model-image-dropped">
+                              <img src="{{firstData.image}}" alt="">
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <div class="col-sm-6">
+      <app-comparative-details [cars]="cars"></app-comparative-details>
+    </div>
+    <div class="col-sm-3">
+        <div>
+            <div class="dropable-body">
+                <div *ngIf="validateSelect('2')">
+                    <div class="model-container-dropped">
+                        <div class="model-title">
+                            <h3>{{secondData.name}} 
+                                <i class="fa fa-times" aria-hidden="true" (click)="deleteSecondData()"></i>
+                              </h3>
+                        </div>
+                        <div class="model-image-dropped">
+                            <img src="{{secondData.image}}" alt="">
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

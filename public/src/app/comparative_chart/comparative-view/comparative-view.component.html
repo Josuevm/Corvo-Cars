@@ -15,5 +15,12 @@
     </div>
   </div>
 </div>
-<app-car-selector></app-car-selector>
+<div *ngIf="!isTouch">
+  <app-car-selector></app-car-selector>
+</div>
+
+<div *ngIf="isTouch">
+  <app-car-selector-touch></app-car-selector-touch>
+</div>
+
 

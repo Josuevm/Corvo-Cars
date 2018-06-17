@@ -83,3 +83,9 @@ h1,h2,h3,h4,h5{
 .top-bufferM {
     margin-top: 80px;
 }
+
+@media screen and (max-width: 1024px) {
+    .dropable-container {
+      visibility: hidden;
+    }
+  }
