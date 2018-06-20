@@ -36,10 +36,6 @@ export class GeneralFeaturePickerComponent implements OnInit {
     this.selectedCarSrv.specsChanged.subscribe((res) => this.changeDataType());
   }
 
-  ngOnChanges() {
-    this.changeDataType();
-  }
-
   changeDataType() {
     switch (this.type) {
       case 'interiors':

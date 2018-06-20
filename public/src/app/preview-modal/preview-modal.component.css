@@ -13,6 +13,13 @@
    border-bottom:  3px solid #cb9f3d;
 }
 
+#x {
+  color: #FFF;
+}
+.close {
+  color: #FFF;
+}
+
 .car.preview{
  padding: 0%;
  margin: 0%;
@@ -26,6 +33,11 @@
     color: white;
     border-radius: 0px; 
     margin-top: 23%;
+}
+
+.modalpdf{
+  background-color:white;
+  color: black;
 }
 
 .modal-footer{

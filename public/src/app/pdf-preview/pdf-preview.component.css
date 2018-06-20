@@ -1,0 +1,86 @@
+.car.preview{
+    padding: 0%;
+    margin: 0%;
+   }
+   
+   .modal-content{
+       text-transform: uppercase;
+       font-family: 'Rajdhani', sans-serif;
+       background-color: rgba(0, 0, 0);
+       font-size: 1vw;
+       color: white;
+       border-radius: 0px; 
+       margin-top: 23%;
+   }
+   
+   .modal-footer{
+       border-top: 0px;
+       text-align: left;
+   }
+   
+   a {
+       text-decoration: none;
+     
+     }
+     
+     
+     .pdf.box {
+       font-size: 1.6vw;
+       font-family: 'Rajdhani', sans-serif;
+       /* margin-top: 2em; */
+       position: relative;
+       vertical-align: middle;
+       color: #FFF;
+       display: inline-block;
+       /* line-height: 60px; */
+       text-align: center;
+       transition: 0.5s;
+       /* padding: 0.7em; */
+       cursor: pointer;
+       border: 2px solid #FFF;
+       -webkit-transition: 0.5s;
+     }
+     
+     .pdf.box:hover {
+       border: 2px solid rgba(0,160,80,0);
+       color: #FFF;
+     }
+     
+     .pdf.box::before, .box::after {
+       width: 100%;
+       height:100%;
+       z-index: 3;
+       content:'';
+       position: absolute;
+       top:0;
+       left:0;
+       box-sizing: border-box;
+       -webkit-transform: scale(0);
+       transform: scale(0);
+       transition: 0.5s;
+     }
+     
+     .pdf.foo::before {
+       border-bottom: 3px solid #cb9f3d;
+       border-left: 3px solid #cb9f3d;
+       -webkit-transform-origin: 0 100%;
+       transform-origin: 0 100%;
+     }
+     
+     .pdf.foo::after {
+       border-top: 3px solid #cb9f3d;
+       border-right: 3px solid #cb9f3d;
+       -webkit-transform-origin: 100% 0%;
+       transform-origin: 100% 0%;
+     }
+   
+     .pdf.box:hover::after, .box:hover::before {
+       -webkit-transform: scale(1);
+       transform: scale(1);
+     }
+   
+     .snip1404 .plan-price {
+       font-weight: 600;
+       font-size: 3em;
+       color:#cb9f3d;
+     }

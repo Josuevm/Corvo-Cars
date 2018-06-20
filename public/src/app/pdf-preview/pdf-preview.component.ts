@@ -1,28 +1,21 @@
-import { Component, OnInit, Output, ViewChild,ViewEncapsulation} from '@angular/core';
-import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
+import { Component, OnInit } from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap/modal';
 import { SelectedCarService } from '../selected-car.service';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-preview-modal',
-  templateUrl: './preview-modal.component.html',
-  styleUrls: ['./preview-modal.component.css'],
-  encapsulation: ViewEncapsulation.None
+  selector: 'app-pdf-preview',
+  templateUrl: './pdf-preview.component.html',
+  styleUrls: ['./pdf-preview.component.css']
 })
-export class PreviewModalComponent implements OnInit {
+export class PdfPreviewComponent implements OnInit {
 
-  bsModalRef: BsModalRef;
   subT = 0;
   specs : any;
-  generatingPDF: boolean = false;
-
   details =[]
 
-  constructor(private modalService: BsModalService, 
-    private selectedCarSrv: SelectedCarService,
-    private router: Router) { }
+  constructor(private selectedCarSrv: SelectedCarService) { }
 
 
   ngOnInit() {
@@ -99,18 +92,15 @@ getExtraP1(){
 
   downloadPDF() {
     let element = document.getElementById("PDFcontent");
-    element.style.backgroundColor = 'white';
-    element.style.color = 'black';
-    let pdf = new jsPDF();
     html2canvas(element).then(function(canvas) {
-        element.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-        element.style.color = 'white';
         // Export the canvas to its data URI representation
         let base64image = canvas.toDataURL();
-        pdf.addImage(base64image, 45, 10, 110, 90);
+        // Open the image in a new window
+        window.open(base64image , "_blank");
+        let pdf = new jsPDF();
+        pdf.addImage(base64image, 10, 10, 160, 200);
         pdf.save('CorvoCar.pdf');
     });
   }
-
 
 }
