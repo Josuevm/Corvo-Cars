@@ -32,6 +32,8 @@ import { CarSelectorComponent } from './comparative_chart/car-selector/car-selec
 import { ComparativeViewComponent } from './comparative_chart/comparative-view/comparative-view.component';
 import { ComparativeDetailsComponent } from './comparative_chart/comparative-details/comparative-details.component';
 import { PdfPreviewComponent } from './pdf-preview/pdf-preview.component'
+import { CarSelectorTouchComponent } from './comparative_chart/car-selector-touch/car-selector-touch.component';
+
 
 
 @NgModule({
@@ -55,7 +57,8 @@ import { PdfPreviewComponent } from './pdf-preview/pdf-preview.component'
     CarSelectorComponent,
     ComparativeViewComponent,
     ComparativeDetailsComponent,
-    PdfPreviewComponent
+    PdfPreviewComponent,
+    CarSelectorTouchComponent
 
   ],
   imports: [

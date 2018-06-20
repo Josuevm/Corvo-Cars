@@ -2,6 +2,7 @@
     border: 4px solid rgb(10, 10, 10);
     text-align: center;
     cursor: move;
+    text-transform: uppercase;
 }
 
 h1,h2,h3,h4,h5{
@@ -47,6 +48,7 @@ h1,h2,h3,h4,h5{
     text-align: center;
     border-style: dashed;
     color:rgb(93, 93, 93);
+    text-transform: uppercase;
 }
 
 .drop-text{
@@ -75,9 +77,15 @@ h1,h2,h3,h4,h5{
 }
 
 .model-container.dragged{
-    cursor: not-allowed;
+    cursor:not-allowed;
 }
 
 .top-bufferM {
     margin-top: 80px;
 }
+
+@media screen and (max-width: 1024px) {
+    .dropable-container {
+      visibility: hidden;
+    }
+  }

@@ -8,7 +8,6 @@ var Interior_paths = require('../models/Interior_paths.js');
   
         Interior_paths.find(function (err, products) {
             if (err) return next(err);
-            console.log(products);
             res.json(products);
         });
     });

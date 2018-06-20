@@ -1,6 +1,5 @@
 
-
-a:hover, a:focus { color: #888; text-decoration: none; }
+a:hover, a:focus { color: rgb(34,34,34); text-decoration: none; }
 
 strong { font-weight: bold; }
 
@@ -21,6 +20,7 @@ h3, h4 { line-height: 20px; }
     -moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
     -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
     box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
+    text-transform: uppercase;
 }
 
 .page-title-container h1 {
@@ -28,7 +28,7 @@ h3, h4 { line-height: 20px; }
     margin-left: 10px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 30px;
-    color: #5d5d5d;
+    color: rgb(34,34,34);
     font-weight: bold;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
     vertical-align: middle;
@@ -56,15 +56,16 @@ h3, h4 { line-height: 20px; }
     padding-bottom: 50px;
     text-align: left;
     font-family: 'Rajdhani', sans-serif;
-    color: #888;
+    color: rgb(34,34,34);
     font-size: 12px;
+    text-transform: uppercase;
 }
 
 .contact-us-container h3 {
     margin-top: 25px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 18px;
-    color: #5d5d5d;
+    color: rgb(34,34,34);
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 0 1px 0 rgba(255,255,255,.7);
@@ -100,11 +101,11 @@ textarea {
     padding: 0 6px;
     vertical-align: middle;
     background: none;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(34,34,34);
     font-family: 'Rajdhani', sans-serif;
     font-size: 13px;
     font-weight: 400;
-    color: #888;
+    color: rgb(34,34,34);
     font-style: italic;
     -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
@@ -114,7 +115,7 @@ textarea {
 input[type="text"]:focus, 
 textarea:focus {
 	outline: 0;
-    border: 1px solid #bbb;
+    border: 1px solid rgb(34,34,34);
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
 }
 
@@ -142,15 +143,15 @@ button.btn {
 }
 
 input.btn{
-    border: 2px solid rgb(93, 93, 93);
-    color: rgb(93, 93, 93);
+    border: 2px solid rgb(34,34,34);
+    color: rgb(34,34,34);
     font-family: 'Rajdhani', sans-serif;
     font-size: 20px;
     background-color: white;
 }
 
 button.btn:hover {
-	background: #5d5d5d;
+	background: rgb(34,34,34);
     border: 0;
     color: #fff;
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
@@ -158,7 +159,7 @@ button.btn:hover {
 
 button.btn:active {
 	outline: 0;
-    background: #5d5d5d;
+    background: rgb(34,34,34);
     border: 0;
     color: #fff;
     -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.15) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
@@ -168,14 +169,14 @@ button.btn:active {
 
 button.btn:focus {
 	outline: 0;
-    background: #5d5d5d;
+    background: rgb(34,34,34);
     border: 0;
     color: #fff;
 }
 
 .btn:active:focus, .btn.active:focus {
 	outline: 0;
-    background: #5d5d5d;
+    background: rgb(34,34,34);
     border: 0;
     color: #fff;
 }
@@ -205,16 +206,16 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram{
     width: 40px;
     }
     i.fa.fa-facebook{
-    border: 1px solid #333;
-    color: #333;
+    border: 1px solid rgb(34,34,34);
+    color: rgb(34,34,34);
     }
     i.fa.fa-twitter{
-    border: 1px solid #333;
-    color: #333;
+    border: 1px solid rgb(34,34,34);
+    color: rgb(34,34,34);
     }
     i.fa.fa-instagram{
-    border: 1px solid #333;
-    color: #333;
+    border: 1px solid rgb(34,34,34);
+    color: rgb(34,34,34);
     }
     i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram,i.fa.fa-pinterest,i.fa.fa-linkedin,i.fa.fa-google-plus,i.fa.fa-github{
     border-radius: 100%;
@@ -226,27 +227,27 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram{
     width: 38px;
     }
     i.fa.fa-github{
-    border: 1px solid #333;
-    color: #333;
+    border: 1px solid rgb(34,34,34);
+    color: rgb(34,34,34);
     }
     i.fa.fa-google-plus{
-    border: 1px solid #333;
-    color: #333;
+    border: 1px solid rgb(34,34,34);
+    color: rgb(34,34,34);
     }
     i.fa.fa-pinterest{
-    border: 1px solid #333;
-    color: #333;
+    border: 1px solid rgb(34,34,34);
+    color: rgb(34,34,34);
     }
     i.fa.fa-linkedin{
-    border: 1px solid #333;
-    color: #333;
+    border: 1px solid rgb(34,34,34);
+    color: rgb(34,34,34);
     }
    
    .social-icons .fa:hover, .social-icons .fa:active {
-       color: #333;
-       -webkit-box-shadow: 1px 1px 3px #333;
-       -moz-box-shadow: 1px 1px 3px #333;
-       box-shadow: 1px 1px 3px #333; 
+       color: rgb(34,34,34);
+       -webkit-box-shadow: 1px 1px 3px rgb(34,34,34);
+       -moz-box-shadow: 1px 1px 3px rgb(34,34,34);
+       box-shadow: 1px 1px 3px rgb(34,34,34); 
    }
    
    .social-icons.icon-zoom .fa:hover, .social-icons.icon-zoom .fa:active { 
@@ -277,7 +278,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-instagram{
    
    .row a:active{
      
-     color:#333;
+     color:rgb(34,34,34);
      text-decoration:none
    }
       

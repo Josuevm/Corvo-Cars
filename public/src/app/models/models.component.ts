@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { CarDataService } from '../car-data.service';
 import { SelectedCarService } from '../selected-car.service';
 

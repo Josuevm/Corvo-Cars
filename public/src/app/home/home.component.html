@@ -1,12 +1,23 @@
-<div class="top-content">
-    <app-nav-bar></app-nav-bar>
-    <span class="helper"></span>
-    <app-header></app-header>
+<div id="videoDiv">
+    <div id="videoBlock">
+        <video preload="auto" id="video" autoplay loop="loop">
+            <source src="../../assets/videos/imperiale.webm" type="video/webm" />
+        </video>
+        <div id="videoMessage">
+            <div class="top-content">
+                <app-nav-bar></app-nav-bar>
+                <span class="helper"></span>
+                <app-header></app-header>
+
+            </div>
+        </div>
+
+    </div>
 </div>
 <app-models (modelChanged)='onModelChanged($event)'></app-models>
 <div [ngSwitch]="section">
     <div *ngSwitchCase="'builder'">
-        <car-builder ></car-builder>
+        <car-builder></car-builder>
     </div>
     <div *ngSwitchCase="'details'">
         <app-model-info [model]="selectedModelName" (customize)="onCustomize()"></app-model-info>
@@ -15,5 +26,3 @@
         <app-model-info [model]="selectedModelName" (customize)="onCustomize()"></app-model-info>
     </div>
 </div>
-
-
