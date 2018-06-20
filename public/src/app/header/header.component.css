@@ -50,7 +50,7 @@ img { max-width: 100%; }
 .divider-1 .line { width: 160px; margin: 0 auto; border-bottom: 1px dashed #ccc; }
 
 
-.top-content-container { padding: 350px 0 400px 0; }
+.top-content-container { padding: 13%; }
 
 .top-content .text { padding-top: 60px; color: #fff; }
 .top-content .text h1 { color: #fff; }
