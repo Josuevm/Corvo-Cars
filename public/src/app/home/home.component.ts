@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   getVideoTag() {
-    return `<video autoplay loop muted id="video">
+    return `<video autoplay loop muted width="100%" height="100%" >
     <source src="../../assets/videos/imperiale.webm" type="video/webm" />
   </video>`;
   }
