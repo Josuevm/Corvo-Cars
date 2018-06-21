@@ -1,8 +1,9 @@
 <div id="videoDiv">
     <div id="videoBlock">
-        <video preload="auto" id="video" autoplay loop="loop">
-            <source src="../../assets/videos/imperiale.webm" type="video/webm" />
-        </video>
+        <div class="videoContainer" [innerHTML]="getVideoTag()">
+          
+        </div>
+
         <div id="videoMessage">
             <div class="top-content">
                 <app-nav-bar></app-nav-bar>
