@@ -10,6 +10,10 @@ h3, h4 { line-height: 20px; }
 ::-moz-selection {    background: #fcbd2b; color: #fff; text-shadow: none; }
 ::selection {     background: #fcbd2b; color: #fff; text-shadow: none; }
 
+#navbar {
+    background: rgba(0,0,0,0.55);
+    border-bottom: 1px solid rgb(203,159,61);
+}
 
 
 .page-title-container {
@@ -31,6 +35,7 @@ h3, h4 { line-height: 20px; }
     font-weight: bold;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
     vertical-align: middle;
+    color: white;
 }
 
 .page-title-container p {
@@ -40,10 +45,11 @@ h3, h4 { line-height: 20px; }
     font-size: 18px;
     font-style: italic;
     vertical-align: middle;
+    color: rgba(203,159,61,0.6);
 }
 
 .page-title-container i {
     font-size: 46px;
-    color: #ccc;
     vertical-align: middle;
+    color: rgba(203,159,61,0.9);
 }

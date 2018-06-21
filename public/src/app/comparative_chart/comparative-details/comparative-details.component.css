@@ -5,13 +5,13 @@ th{
 }
 
 tr{
-	background-color: rgb(34, 34, 34);
-	color:white;
-	font-family: 'Rajdhani', sans-serif;
+	/* background-color: rgba(34, 34, 34, 0.6); */
+	background-color: rgb(70, 70, 70, 0.2);
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 td{
-	background-color:rgb(50, 50, 50);
 	font-size: 15px;
 	padding-bottom: 15px;
     padding-top: 15px;
@@ -23,7 +23,7 @@ td{
 
 .center-col{
 	text-align: center;
-	background-color: rgb(70, 70, 70);
+	background-color: rgb(70, 70, 70, 0.2);
 	color:#cb9f3d;
 }
 
@@ -39,6 +39,7 @@ td{
 	border-collapse: separate;
 	border-spacing: 0px 5px;
 	text-transform: uppercase;
+	margin-bottom: 10%;
 }
 
 .performance-star{

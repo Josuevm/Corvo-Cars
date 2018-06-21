@@ -1,9 +1,16 @@
 
 footer{
-    background:#37474F;
-    color:white;
-    background-image:url("https://www.lamborghini.com/themes/custom/lambo/img/base/bg-footer.jpg");
-    background-size: 100% 
+    /* background: #37474F; */
+    color: white;
+    /* background-image: url("https://www.lamborghini.com/themes/custom/lambo/img/base/bg-footer.jpg");
+    background-size: 100%; */
+    /* background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1),rgba(203,159,61,0.3),#cb9f3d); */
+    border-top: 1px solid #cb9f3d;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8),black);
+    }
+
+    .top-buffer {
+        margin-top: 0px;
     }
     
     a{

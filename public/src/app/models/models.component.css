@@ -1,18 +1,24 @@
+* {
+    font-family: 'Rajdhani', sans-serif;
+    color: #fff;
+}
+
 .section-title {
     font-family: "Josefine sans", "sans-seriff";
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #cb9f3d;
     text-align: center;
 }
 
 .model-container{
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(203, 159, 61, 0.035);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.6), 0 6px 9px 0 rgba(0,0,0,0.7);
     text-align: center;
-    cursor: pointer;
 }
 
 .model-container.active {
-    border: 2px solid rgb(10, 10, 10);
+    border: 1.5px dotted  #cb9f3d;
 }
 
 .contain-header>img{

@@ -3,8 +3,9 @@
 	margin-bottom: 0;
 	font-family: 'Cinzel', serif;
 	padding-top: 10px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.57);
 	border: 0;
+	border-bottom: 1px solid rgb(203,159,61);
 	height: 100px;
 	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
 	-o-transition: all .6s; -moz-transition: all .6s; -webkit-transition: all .6s; -ms-transition: all .6s; transition: all .6s;

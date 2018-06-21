@@ -2,3 +2,8 @@
 .top-buffer { margin-top:20px; }
 
 .top-buffer-m { margin-top:80px; }
+
+body {
+    background-image: url("../src/assets/images/background.jpg");
+    background-repeat: repeat;
+}
