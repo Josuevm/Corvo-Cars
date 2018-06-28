@@ -15,28 +15,40 @@ export class RimsPickerComponent implements OnInit {
   selectedRimID: string;
   description: string;
   rimsImages: any;
-  selectedRim ={rimId:"", name:"", price:"", img:""}
+  selectedRim = { rimId: "", name: "", price: "", img: "" }
 
   //must Load images in this array
   rims = [
-    { ID: '0', img: 'rims1', name: '' , price : ""},
-    { ID: '1', img: 'rims2', name: '' , price : ""},
-    { ID: '2', img: 'rims3', name: '' , price : ""},
+    { ID: '0', img: 'rims1', name: '', price: "" },
+    { ID: '1', img: 'rims2', name: '', price: "" },
+    { ID: '2', img: 'rims3', name: '', price: "" },
   ];
 
-  constructor(private carData: CarDataService, private carService: SelectedCarService) {}
+  constructor(private carData: CarDataService, private carService: SelectedCarService) { }
 
   ngOnInit() {
     //load images on rims array from carImages
     // this.carData.loadRims().subscribe(res => {
-      let data: any = this.carData.getRims();
-      for (let dat of data) {
-          if(dat.description != undefined){
+    let data: any = this.carData.getRims();
+    let modelid = this.carService.getModelID();
+    console.log(modelid);
+    for (let dat of data) {
+      console.log(dat.ram == undefined);
+      if (dat.description != undefined) {
+        if (modelid != 0 && dat.ram == undefined) {
+          this.rims[dat.rimId].img = dat.path;
+          this.rims[dat.rimId].name = dat.description;
+          this.rims[dat.rimId].price = dat.price;
+        } else {
+          if (modelid == 0 && dat.ram != undefined) {
             this.rims[dat.rimId].img = dat.path;
             this.rims[dat.rimId].name = dat.description;
             this.rims[dat.rimId].price = dat.price;
           }
-       }
+
+        }
+      }
+    }
     // });
     //Need to update selected Rims to be sinchronized with the selected car when model change
     this.carService.specs.subscribe(specs => {

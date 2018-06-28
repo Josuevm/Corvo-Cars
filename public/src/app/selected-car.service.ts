@@ -29,6 +29,10 @@ export class SelectedCarService {
     this.specsChanged.emit(specs);
   }
 
+  getModelID(){
+    return this.car.modelID;
+  }
+
   getFeatures(idModel){
     return this.http.get('/car_models/features/'+idModel)
 }
