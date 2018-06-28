@@ -98,12 +98,12 @@ getExtraP1(){
   calculateTotal(){ 
     this.getExtraP()
     if (this.selectedCarSrv.getModelID() == 1) {
-      this.subT+= 15000  
+      this.subT+= 22000  
       //imperiale
       } else if(this.selectedCarSrv.getModelID() == 2){
-      this.subT += 20000
+      this.subT += 250000
       }else{
-      this.subT+=13000  
+      this.subT+=34000
       }
     this.subT+=parseInt(this.specs.motor.price) +parseInt(this.specs.inside.price)+parseInt(this.specs.rims.price);
     

@@ -1,5 +1,5 @@
 .material-icons{font-size:3em}
-.blockquote-box{border-right:5px solid #E6E6E6;margin-bottom:25px}
+.blockquote-box{border-right:2px solid #E6E6E6;margin-bottom:25px}
 .blockquote-box .square{
     min-height:50px;
     margin-right:15px;
@@ -7,17 +7,22 @@
     background-color:#E6E6E6;
 }
 .blockquote-box.blockquote-primary{border-color: #cb9f3d;}
-.blockquote-box.blockquote-primary .square{background-color:#FFF;color:#333}
+.blockquote-box.blockquote-primary .square{    background-color: black;
+  color: #cb9f3d;}
+
+  .modal-backdrop.in {
+    opacity: 0.9;
+}
 
 .modal-header{
-   border-bottom:  3px solid #cb9f3d;
+   border-bottom:  2px solid #cb9f3d;
 }
 
 #x {
-  color: #FFF;
+  color: #cb9f3d;
 }
 .close {
-  color: #FFF;
+  color: #cb9f3d;
 }
 
 .car.preview{
@@ -92,6 +97,7 @@ a {
     cursor: pointer;
     border: 2px solid #FFF;
     -webkit-transition: 0.5s;
+    background: linear-gradient(-45deg, rgba(255,255,255,.2) 60%, rgba(255,255,255,.05) 60%, rgba(255,255,255,.05) 80%, rgba(0,0,0,.1) 80%);
   }
   
   .pdf.box:hover {
