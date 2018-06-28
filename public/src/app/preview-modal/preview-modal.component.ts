@@ -111,14 +111,15 @@ getExtraP1(){
 
   downloadPDF() {
     let element = document.getElementById("PDFcontent");
-    element.style.backgroundColor = 'white';
-    element.style.color = 'black';
-    let pdf = new jsPDF();
+    let divPDF = document.createElement("div");
+    divPDF.style.width = "100%";
+    divPDF.style.height = "100%";
+    divPDF.style.backgroundColor = "black";
+    divPDF.appendChild(element);
     html2canvas(element).then(function(canvas) {
-        element.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-        element.style.color = 'white';
         // Export the canvas to its data URI representation
         let base64image = canvas.toDataURL();
+        let pdf = new jsPDF();
         pdf.addImage(base64image, 45, 10, 110, 90);
         pdf.save('CorvoCar.pdf');
     });
