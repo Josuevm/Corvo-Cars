@@ -36,6 +36,7 @@ export class PreviewModalComponent implements OnInit {
 
   }
 
+
   getDetails(){
     
  
@@ -83,16 +84,27 @@ getExtraP(){
 }
 
 getExtraP1(){
+  //Imparatus
   let subT = 0
+
   for(let extra of this.specs.extras){
     subT+=parseInt(extra.price);
   }
+  
   return subT
 }
 
 
   calculateTotal(){ 
     this.getExtraP()
+    if (this.selectedCarSrv.getModelID() == 1) {
+      this.subT+= 15000  
+      //imperiale
+      } else if(this.selectedCarSrv.getModelID() == 2){
+      this.subT += 20000
+      }else{
+      this.subT+=13000  
+      }
     this.subT+=parseInt(this.specs.motor.price) +parseInt(this.specs.inside.price)+parseInt(this.specs.rims.price);
     
   }
