@@ -25,6 +25,26 @@
  margin: 0%;
 }
 
+.carPreview .baseImage{
+  margin-top: 50%;
+  width: 65vw;
+}
+
+.carPreview .bodyImage{
+  margin-top: 50%;
+  width: 65vw;
+}
+
+.carPreview .extraImage{
+  margin-top: 50%;
+  width: 65vw;
+}
+
+.carPreview .rimsImage{
+  margin-top: 50%;
+  width: 65vw;
+}
+
 .modal-content{
     text-transform: uppercase;
     font-family: 'Rajdhani', sans-serif;
@@ -33,6 +53,12 @@
     color: white;
     border-radius: 0px; 
     margin-top: 23%;
+}
+
+.modal-preview{
+  margin-left: 22vw;
+  margin-top: -3vh;
+  width: 32vw;
 }
 
 .modalpdf{

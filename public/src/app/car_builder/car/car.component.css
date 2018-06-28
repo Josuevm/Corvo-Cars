@@ -8,7 +8,7 @@
   position: absolute;
   background-size: 100%;
     width: 80vw;
-    height: 60vh;
+    height: 64vh;
     margin-top: 18%;
 }
 
@@ -18,7 +18,7 @@
   position: absolute;
   background-size: 100%;
     width: 80vw;
-    height: 60vh;
+    height: 64vh;
     margin-top: 18%;
     -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
 }
@@ -29,7 +29,7 @@
   position: absolute;
   background-size: 100%;
     width: 80vw;
-    height: 60vh;
+    height: 64vh;
     margin-top: 18%;
 }
 
@@ -39,12 +39,12 @@
   position: absolute;
   background-size: 100%;
     width: 80vw;
-    height: 60vh;
+    height: 64vh;
     margin-top: 18%;
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
     .bodyImage{
       -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
       position: absolute;
