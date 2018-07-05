@@ -49,35 +49,35 @@
       -webkit-filter: opacity(.5) drop-shadow(0 0 0 white);  filter: opacity(.5) drop-shadow(0 0 0 white);
       position: absolute;
       background-size: 100%;
-        width: 80vw;
-        height: 60vh;
-        margin-top: 5%;
+      width: 80vw;
+      height: 40vh;
+      margin-top: 15%;
     }
 
     .baseImage{
       position: absolute;
       background-size: 100%;
-        width: 80vw;
-        height: 60vh;
-        margin-top: 5%;
+      width: 80vw;
+      height: 40vh;
+      margin-top: 15%;
     }
     
     .extraImage{
 
       position: absolute;
       background-size: 100%;
-        width: 80vw;
-        height: 60vh;
-        margin-top: 5%;
+      width: 80vw;
+      height: 40vh;
+      margin-top: 15%;
     }
     
     .rimsImage{
 
       position: absolute;
       background-size: 100%;
-        width: 80vw;
-        height: 60vh;
-        margin-top: 5%;
+      width: 80vw;
+      height: 40vh;
+      margin-top: 15%;
     }
   
 }

@@ -24,27 +24,17 @@
     width: 90%;
 }
 
+@media only screen and (max-width: 1024px) {
+    .imageContainer{
+        height: 16vh;
+    }
+}
 
 .imageContainer:hover .overlay{
     width: 91%;
     border-right: 3px solid rgb(203, 159, 61);
+    
 }
-@media only screen and (max-width: 992px) {
-    .imageContainer:hover .overlay{
-        width: 28.5vw;
-        border-right: 3px solid rgb(203, 159, 61);
-    }
-}
-
-
-.imageContainer:hover{
-    border: 2px solid rgb(203, 159, 61);
-}
-
-
-
-
-
 
 .overlay {
     position: absolute;
@@ -58,6 +48,33 @@
     -webkit-transition: .5s ease;
     transition: .5s ease;
   }
+
+@media only screen and (max-width: 1024px) {
+
+    .imageContainer:hover .overlay{
+        height: 15.6vh;
+        border-right: 3px solid rgb(203, 159, 61);
+    }
+
+    .overlay{
+        height: 15.6vh;
+    }
+
+    
+
+
+}
+
+
+.imageContainer:hover{
+    border: 2px solid rgb(203, 159, 61);
+}
+
+
+
+
+
+
 
 
 .featureName{

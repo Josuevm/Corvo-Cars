@@ -4,7 +4,7 @@
 <div id="PDFcontent">
     
   <div class="modal-header">
-    <h2 class="modal-title pull-left">{{specs.name}}</h2>
+    <div class="modal-title pull-left">{{specs.name}}</div>
     <button type="button" class="close pull-right" (click)="modalService._hideModal(1)" aria-label="Close">
       <span aria-hidden="true" id="x">&times;</span>
     </button>
@@ -14,21 +14,21 @@
     <div class="details">
       <div class="row">
         <div class="col-xs-3">
-          <h3>Details</h3>
+          Details
         </div>
       </div>
       <div class="row">
         <div *ngFor='let detail of details'>
           <div class="col-xs-6 col-md-5">
             <div class="blockquote-box blockquote-primary clearfix">
-              <div class="square pull-left">
-                <i class="material-icons">{{detail.icon}}</i>
+              <div  class="square pull-left">
+                <i *ngIf="detail.name != 'Total'" class="material-icons">{{detail.icon}}</i>
               </div>
-              <h4>
+              
                 <b>{{detail.name}}</b>
-              </h4>
+              
               <p>{{detail.desc}}</p>
-              <p>Price:
+              <p *ngIf="detail.price != '0'">Price:
                 <span style="color:#cb9f3d">{{detail.price}} $</span>
               </p>
             </div>
@@ -36,11 +36,10 @@
           </div>
 
         </div>
-        <p>Total:
-          <span style="color:#cb9f3d">{{subT}} $</span>
-        </p>
+   
       </div>
     </div>
+   
   </div>
 </div>
 
